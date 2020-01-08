@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+   <sim include="Systems/views.xml">
+      <description>Mikoyan-Gurevich MiG-25</description>
+      <author>Petar Jedvaj, Daniel Overbeck</author>
+      <long-description>The MiG-25 Foxbat is a record-breaking supersonic interceptor/reconnaissance aircraft. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
+      <flight-model>jsb</flight-model>
+      <aero>MiG-25</aero>
+      <model>
+         <path>Aircraft/MiG-25/Models/MiG-25.xml</path>
+      </model>
+      <sound>
+         <path>Aircraft/MiG-25/Sounds/Sound.xml</path>
+      </sound>
+		<multiplay>
+			<generic>
+				<float n="1" type="double" alias="/engines/engine[0]/nozzle-pos-norm" />
+				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
+				<float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm" />
+				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
+			</generic>
+		</multiplay>
+   </sim>
+   <engines>
+      <engine n="0">
+         <running>true</running>
+         <reverser-pos-norm type="double">0</reverser-pos-norm>
+      </engine>
+      <engine n="1">
+         <running>true</running>
+         <reverser-pos-norm type="double">0</reverser-pos-norm>
+      </engine>
+   </engines>
+</PropertyList>
