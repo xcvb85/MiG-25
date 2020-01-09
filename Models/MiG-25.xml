@@ -68,28 +68,62 @@
   </offsets>
  </model>
 
-	<animation>
-		<type>select</type>
-		<object-name>NoseWheels</object-name>
-		<object-name>NoseGear</object-name>
-		<object-name>NoseGearS1</object-name>
-		<object-name>NoseGearS2</object-name>
-		<object-name>NoseGearS3</object-name>
-		<object-name>NoseGearS4</object-name>
-		<object-name>BackWheelL</object-name>
-		<object-name>BackWheelR</object-name>
-		<object-name>GearL</object-name>
-		<object-name>GearR</object-name>
-		<object-name>GearS1L</object-name>
-		<object-name>GearS1R</object-name>
-		<object-name>GearS2L</object-name>
-		<object-name>GearS2R</object-name>
-		<condition>
-			<greater-than>
-				<property>gear/gear[0]/position-norm</property>
-				<value>0.1</value>
-			</greater-than>
-		</condition>
-	</animation>
+ <!-- Rudders -->
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>RudderL</object-name>
+   <property>/surface-positions/rudder-pos-norm</property>
+   <factor>-20</factor> <!-- FIXME -->
+   <axis>
+     <x1-m> 9.44637</x1-m>
+     <y1-m>-1.47198</y1-m>
+     <z1-m> 2.68363</z1-m>
+     <x2-m> 8.64289</x2-m>
+     <y2-m>-1.26195</y2-m>
+     <z2-m> 0.95723</z2-m>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>RudderR</object-name>
+   <property>/surface-positions/rudder-pos-norm</property>
+   <factor>-20</factor> <!-- FIXME -->
+   <axis>
+     <x1-m>9.44637</x1-m>
+     <y1-m>1.47198</y1-m>
+     <z1-m>2.68363</z1-m>
+     <x2-m>8.64289</x2-m>
+     <y2-m>1.26195</y2-m>
+     <z2-m>0.95723</z2-m>
+   </axis>
+ </animation>
+
+     
+ <animation>
+   <type>select</type>
+   <object-name>NoseWheels</object-name>
+   <object-name>NoseGear</object-name>
+   <object-name>NoseGearS1</object-name>
+   <object-name>NoseGearS2</object-name>
+   <object-name>NoseGearS3</object-name>
+   <object-name>NoseGearS4</object-name>
+   <object-name>BackWheelL</object-name>
+   <object-name>BackWheelR</object-name>
+   <object-name>GearL</object-name>
+   <object-name>GearR</object-name>
+   <object-name>GearS1L</object-name>
+   <object-name>GearS1R</object-name>
+   <object-name>GearS2L</object-name>
+   <object-name>GearS2R</object-name>
+   <condition>
+     <greater-than>
+       <property>gear/gear[0]/position-norm</property>
+       <value>0.1</value>
+     </greater-than>
+   </condition>
+ </animation>
+
 </PropertyList>
 
