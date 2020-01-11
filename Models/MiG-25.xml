@@ -101,6 +101,38 @@
     </axis>
   </animation>
 
+  <!-- Ailerons -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronL</object-name>
+    <property>/surface-positions/left-aileron-pos-norm</property>
+    <factor>20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m> 6.949</x1-m>
+      <y1-m>-5.301</y1-m>
+      <z1-m> 0.521</z1-m>
+      <x2-m> 6.366</x2-m>
+      <y2-m>-3.591</y2-m>
+      <z2-m> 0.686</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronR</object-name>
+    <property>/surface-positions/right-aileron-pos-norm</property>
+    <factor>20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m>6.949</x1-m>
+      <y1-m>5.301</y1-m>
+      <z1-m>0.521</z1-m>
+      <x2-m>6.366</x2-m>
+      <y2-m>3.591</y2-m>
+      <z2-m>0.686</z2-m>
+    </axis>
+  </animation>
+		
   <!-- Flaps -->
   <animation>
     <type>rotate</type>
