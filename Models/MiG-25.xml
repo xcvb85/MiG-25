@@ -132,8 +132,29 @@
       <z2-m>0.686</z2-m>
     </axis>
   </animation>
-		
+
+  <!-- Elevator -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HStabL</object-name>
+    <object-name>HStabR</object-name>
+    <property>/surface-positions/elevator-pos-norm</property>
+    <factor>15</factor> <!-- FIXME -->
+    <center>
+      <x-m>8.6</x-m> <!-- only eyeballed, needs verification -->
+      <y-m>0</y-m>
+      <z-m>0.009</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
   <!-- Flaps -->
+  
   <animation>
     <type>rotate</type>
     <object-name>FlapL</object-name>
