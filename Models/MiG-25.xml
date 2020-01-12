@@ -184,7 +184,8 @@
       <z2-m>0.68625</z2-m>
     </axis>
   </animation>
-  
+
+  <!-- Landing gear -->
   <animation>
     <type>select</type>
     <object-name>NoseWheels</object-name>
@@ -207,6 +208,29 @@
 	<value>0.1</value>
       </greater-than>
     </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>NoseWheels</object-name>
+    <object-name>NoseGear</object-name>
+    <object-name>NoseGearS1</object-name>
+    <object-name>NoseGearS2</object-name>
+    <object-name>NoseGearS3</object-name>
+    <object-name>NoseGearS4</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor>-100</factor>
+    <offset-deg>100</offset-deg>
+    <center>
+      <x-m>-1.24</x-m>
+      <y-m> 0</y-m>
+      <z-m>-0.1</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
   </animation>
 
 </PropertyList>
