@@ -9,7 +9,7 @@
  <engine>
       <name>engine-start-outside</name>
       <mode>once</mode>
-      <path>Aircraft/MiG-21bis/Sounds/Samples/mig21startup.wav</path>
+      <path>Aircraft/MiG-25/Sounds/Samples/mig21startup.wav</path>
       <condition>
 <and>
   <greater-than>  
@@ -40,7 +40,7 @@
 <engine>
       <name>turbine</name>
       <mode>looped</mode>
-      <path>Aircraft/MiG-21bis/Sounds/Samples/mig21whine.wav</path>
+      <path>Aircraft/MiG-25/Sounds/Samples/mig21whine.wav</path>
       <condition>
         <property>engines/engine/running</property>
         <not>
@@ -107,7 +107,7 @@
 		
 		   <engine>
       <name>engine</name>
-      <path>Aircraft/MiG-21bis/Sounds/Samples/jet-blast.wav</path>
+      <path>Aircraft/MiG-25/Sounds/Samples/jet-blast.wav</path>
       <mode>looped</mode>
       <condition>
         <property>engines/engine[0]/running</property>
@@ -177,7 +177,7 @@
 		<engine>
 			<name>burner</name>
 			<mode>looped</mode>
-			<path>Aircraft/MiG-21bis/Sounds/Samples/reheat.wav</path>
+			<path>Aircraft/MiG-25/Sounds/Samples/reheat.wav</path>
 			<condition>
 			 <property>engines/engine/afterburner</property>
 			<not>
@@ -287,7 +287,7 @@
 		<sonicboom>
 			<name>Sonic Boom</name>
 			<mode>once</mode>
-			<path>Aircraft/MiG-21bis/Sounds/Samples/Sonic-Boom.wav</path>
+			<path>Aircraft/MiG-25/Sounds/Samples/Sonic-Boom.wav</path>
 			<condition>
 				<and>
 					<greater-than>
@@ -312,7 +312,7 @@
 		<flyby>
 			<name>fly-by</name>
 			<mode>once</mode>
-			<path>Aircraft/MiG-21bis/Sounds/Samples/flyby.wav</path>
+			<path>Aircraft/MiG-25/Sounds/Samples/flyby.wav</path>
 			<condition>
 			<and>
 	    <greater-than>
