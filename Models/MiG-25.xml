@@ -1,12 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>MiG-25.ac</path>
-	<offsets>
-		<heading-deg>0</heading-deg>
-		<roll-deg>0</roll-deg>
-		<x-m>0</x-m>
-		<y-m>0</y-m>
-		<z-m>0</z-m>
-	</offsets>
+	<model>
+		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
+	</model>
 
    <!-- fuselage reflection -->
    <effect>
