@@ -239,7 +239,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>0.1</ind><dep>80</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
     </interpolation>
     <center>
       <x-m>-2.55</x-m>
@@ -259,7 +259,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>0.1</ind><dep>-50</dep></entry>
+      <entry><ind>0.2</ind><dep>-50</dep></entry>
     </interpolation>
     <axis>
       <x1-m>-2.225</x1-m>
@@ -277,7 +277,7 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>0.1</ind><dep>50</dep></entry>
+      <entry><ind>0.2</ind><dep>50</dep></entry>
     </interpolation>
     <axis>
       <x1-m>-2.225</x1-m>
@@ -305,5 +305,121 @@
       <x>0</x>
     </axis>
   </animation>
+
+  <!-- Left main gear -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors1L</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>-80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 1.118</x1-m>
+      <y1-m>-1.57</y1-m>
+      <z1-m>-0.14</z1-m>
+      <x2-m> 2.653</x2-m>
+      <y2-m>-1.605</y2-m>
+      <z2-m>-0.185</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors2L</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>-80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.653</x1-m>
+      <y1-m>-1.605</y1-m>
+      <z1-m>-0.185</z1-m>
+      <x2-m> 3.727</x2-m>
+      <y2-m>-1.565</y2-m>
+      <z2-m>-0.203</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearL</object-name>
+    <object-name>BackWheelL</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <factor>-160</factor>
+    <offset-deg>160</offset-deg>
+    <center>
+      <x-m> 2.957</x-m>
+      <y-m>-1.403</y-m>
+      <z-m>-0.335</z-m>
+    </center>
+    <axis>
+      <x>0.27</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+
+  <!-- Right main gear -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors1R</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 1.118</x1-m>
+      <y1-m> 1.57</y1-m>
+      <z1-m>-0.14</z1-m>
+      <x2-m> 2.653</x2-m>
+      <y2-m> 1.605</y2-m>
+      <z2-m>-0.185</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors2R</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.653</x1-m>
+      <y1-m> 1.605</y1-m>
+      <z1-m>-0.185</z1-m>
+      <x2-m> 3.727</x2-m>
+      <y2-m> 1.565</y2-m>
+      <z2-m>-0.203</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearR</object-name>
+    <object-name>BackWheelR</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor>-160</factor>
+    <offset-deg>160</offset-deg>
+    <center>
+      <x-m> 2.957</x-m>
+      <y-m> 1.403</y-m>
+      <z-m>-0.335</z-m>
+    </center>
+    <axis>
+      <x>-0.27</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+  
 </PropertyList>
 
