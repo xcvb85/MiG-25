@@ -185,7 +185,12 @@
     </axis>
   </animation>
 
-  <!-- Landing gear -->
+  <!-- Landing gear
+       FIXME some more documentation the gears are needed
+             correct the retraction animations, especially the main gears
+  -->
+
+  <!-- Nose gear -->
   <animation>
     <type>select</type>
     <object-name>NoseWheels</object-name>
@@ -303,6 +308,24 @@
       <x>0</x>
       <y>1</y>
       <x>0</x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>NoseGearS4</object-name>
+    <object-name>NoseWheels</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>-70</factor>
+    <center>
+      <x-m>-1.478</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.397</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
     </axis>
   </animation>
 
