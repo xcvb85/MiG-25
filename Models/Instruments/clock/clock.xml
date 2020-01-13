@@ -20,10 +20,10 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>Effects/glass/glass_shader.png</texture>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
     <object-name>glass</object-name>
   </animation>
-  
+
   <!--Needles-->
   <animation>
     <type>rotate</type>

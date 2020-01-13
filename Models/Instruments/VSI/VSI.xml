@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <PropertyList>
-
     <path>VSI.ac</path>
 
     <animation>
@@ -42,11 +41,11 @@
 	<animation>
         <type>rotate</type>
         <object-name>turnneedle</object-name>
-        <property>/fdm/jsbsim/instrumentation/input/roll</property>
+        <property>orientation/roll-deg</property>
         <interpolation>
-            <entry><ind>45.0</ind><dep>-30.0</dep></entry>
+            <entry><ind>45.0</ind><dep>30.0</dep></entry>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>-45.0</ind><dep>30.0</dep></entry>
+            <entry><ind>-45.0</ind><dep>-30.0</dep></entry>
         </interpolation>
         <center>
             <x-m>-0.00764</x-m>
