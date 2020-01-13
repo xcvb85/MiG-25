@@ -1,92 +1,424 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>MiG-25.ac</path>
-	<model>
-		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
-	</model>
-
-   <!-- fuselage reflection -->
-   <effect>
-      <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
-      <object-name>Cone</object-name>
-      <object-name>Fuselage</object-name>
-      <object-name>Intake</object-name>
-      <object-name>WingL</object-name>
-      <object-name>WingR</object-name>
-      <object-name>VStabL</object-name>
-      <object-name>VStabR</object-name>
-      <object-name>AileronL</object-name>
-      <object-name>AileronR</object-name>
-      <object-name>FlapL</object-name>
-      <object-name>FlapR</object-name>
-      <object-name>RudderL</object-name>
-      <object-name>RudderR</object-name>
-      <object-name>HStabL</object-name>
-      <object-name>HStabR</object-name>
-      <object-name>FinL</object-name>
-      <object-name>FinR</object-name>
-      <object-name>Fin1L</object-name>
-      <object-name>Fin1R</object-name>
-      <object-name>Fin2L</object-name>
-      <object-name>Fin2R</object-name>
-      <object-name>Doors1L</object-name>
-      <object-name>Doors1R</object-name>
-      <object-name>Doors2L</object-name>
-      <object-name>Doors2R</object-name>
-      <object-name>DoorsN1</object-name>
-      <object-name>DoorsN2L</object-name>
-      <object-name>DoorsN2R</object-name>
-      <object-name>DoorsN3</object-name>
-      <object-name>AirbrakeTop</object-name>
-      <object-name>Airbrake</object-name>
-   </effect>
-
- <model>
-  <path>Effects/afterburner.xml</path>
-  <condition>
-   <property>sim/multiplay/generic/bool[1]</property>
-  </condition>
+  <path>MiG-25.ac</path>
   <offsets>
-   <x-m> 9.0</x-m>
-   <y-m>-0.8</y-m>
-   <z-m> 0.3</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>0</roll-deg>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
   </offsets>
- </model>
 
- <model>
-  <path>Effects/afterburner.xml</path>
-  <condition>
-   <property>sim/multiplay/generic/bool[2]</property>
-  </condition>
-  <offsets>
-   <x-m> 9.0</x-m>
-   <y-m> 0.8</y-m>
-   <z-m> 0.3</z-m>
-  </offsets>
- </model>
+  <!-- fuselage reflection -->
+  <effect>
+    <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
+    <object-name>Cone</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>Intake</object-name>
+    <object-name>WingL</object-name>
+    <object-name>WingR</object-name>
+    <object-name>VStabL</object-name>
+    <object-name>VStabR</object-name>
+    <object-name>AileronL</object-name>
+    <object-name>AileronR</object-name>
+    <object-name>FlapL</object-name>
+    <object-name>FlapR</object-name>
+    <object-name>RudderL</object-name>
+    <object-name>RudderR</object-name>
+    <object-name>HStabL</object-name>
+    <object-name>HStabR</object-name>
+    <object-name>FinL</object-name>
+    <object-name>FinR</object-name>
+    <object-name>Fin1L</object-name>
+    <object-name>Fin1R</object-name>
+    <object-name>Fin2L</object-name>
+    <object-name>Fin2R</object-name>
+    <object-name>Doors1L</object-name>
+    <object-name>Doors1R</object-name>
+    <object-name>Doors2L</object-name>
+    <object-name>Doors2R</object-name>
+    <object-name>DoorsN1</object-name>
+    <object-name>DoorsN2L</object-name>
+    <object-name>DoorsN2R</object-name>
+    <object-name>DoorsN3</object-name>
+    <object-name>AirbrakeTop</object-name>
+    <object-name>Airbrake</object-name>
+  </effect>
 
-	<animation>
-		<type>select</type>
-		<object-name>NoseWheels</object-name>
-		<object-name>NoseGear</object-name>
-		<object-name>NoseGearS1</object-name>
-		<object-name>NoseGearS2</object-name>
-		<object-name>NoseGearS3</object-name>
-		<object-name>NoseGearS4</object-name>
-		<object-name>BackWheelL</object-name>
-		<object-name>BackWheelR</object-name>
-		<object-name>GearL</object-name>
-		<object-name>GearR</object-name>
-		<object-name>GearS1L</object-name>
-		<object-name>GearS1R</object-name>
-		<object-name>GearS2L</object-name>
-		<object-name>GearS2R</object-name>
-		<condition>
-			<greater-than>
-				<property>gear/gear[0]/position-norm</property>
-				<value>0.1</value>
-			</greater-than>
-		</condition>
-	</animation>
+  <model>
+    <path>Effects/afterburner.xml</path>
+    <condition>
+      <property>sim/multiplay/generic/bool[1]</property>
+    </condition>
+    <offsets>
+      <x-m> 9.0</x-m>
+      <y-m>-0.8</y-m>
+      <z-m> 0.3</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Effects/afterburner.xml</path>
+    <condition>
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <offsets>
+      <x-m> 9.0</x-m>
+      <y-m> 0.8</y-m>
+      <z-m> 0.3</z-m>
+    </offsets>
+  </model>
+
+  <!-- Rudders -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>RudderL</object-name>
+    <property>/surface-positions/rudder-pos-norm</property>
+    <factor>-20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m> 9.44637</x1-m>
+      <y1-m>-1.47198</y1-m>
+      <z1-m> 2.68363</z1-m>
+      <x2-m> 8.64289</x2-m>
+      <y2-m>-1.26195</y2-m>
+      <z2-m> 0.95723</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RudderR</object-name>
+    <property>/surface-positions/rudder-pos-norm</property>
+    <factor>-20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m>9.44637</x1-m>
+      <y1-m>1.47198</y1-m>
+      <z1-m>2.68363</z1-m>
+      <x2-m>8.64289</x2-m>
+      <y2-m>1.26195</y2-m>
+      <z2-m>0.95723</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Ailerons -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronL</object-name>
+    <property>/surface-positions/left-aileron-pos-norm</property>
+    <factor>20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m> 6.949</x1-m>
+      <y1-m>-5.301</y1-m>
+      <z1-m> 0.521</z1-m>
+      <x2-m> 6.366</x2-m>
+      <y2-m>-3.591</y2-m>
+      <z2-m> 0.686</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronR</object-name>
+    <property>/surface-positions/right-aileron-pos-norm</property>
+    <factor>20</factor> <!-- FIXME -->
+    <axis>
+      <x1-m>6.949</x1-m>
+      <y1-m>5.301</y1-m>
+      <z1-m>0.521</z1-m>
+      <x2-m>6.366</x2-m>
+      <y2-m>3.591</y2-m>
+      <z2-m>0.686</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Elevator -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HStabL</object-name>
+    <object-name>HStabR</object-name>
+    <property>/surface-positions/elevator-pos-norm</property>
+    <factor>15</factor> <!-- FIXME -->
+    <center>
+      <x-m>8.6</x-m> <!-- only eyeballed, needs verification -->
+      <y-m>0</y-m>
+      <z-m>0.009</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Flaps -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>FlapL</object-name>
+    <property>/surface-positions/flap-pos-norm</property>
+    <factor>40</factor> <!-- FIXME -->
+    <axis>
+      <x1-m> 6.36606</x1-m>
+      <y1-m>-3.59139</y1-m>
+      <z1-m> 0.68625</z1-m>
+      <x2-m> 5.74199</x2-m>
+      <y2-m>-1.53995</y2-m>
+      <z2-m> 0.87546</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FlapR</object-name>
+    <property>/surface-positions/flap-pos-norm</property>
+    <factor>40</factor> <!-- FIXME -->
+    <axis>
+      <x1-m>5.74199</x1-m>
+      <y1-m>1.53995</y1-m>
+      <z1-m>0.87546</z1-m>
+      <x2-m>6.36606</x2-m>
+      <y2-m>3.59139</y2-m>
+      <z2-m>0.68625</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Landing gear -->
+  <animation>
+    <type>select</type>
+    <object-name>NoseWheels</object-name>
+    <object-name>NoseGear</object-name>
+    <object-name>NoseGearS1</object-name>
+    <object-name>NoseGearS2</object-name>
+    <object-name>NoseGearS3</object-name>
+    <object-name>NoseGearS4</object-name>
+    <object-name>BackWheelL</object-name>
+    <object-name>BackWheelR</object-name>
+    <object-name>GearL</object-name>
+    <object-name>GearR</object-name>
+    <object-name>GearS1L</object-name>
+    <object-name>GearS1R</object-name>
+    <object-name>GearS2L</object-name>
+    <object-name>GearS2R</object-name>
+    <condition>
+      <greater-than>
+	<property>gear/gear[0]/position-norm</property>
+	<value>0.1</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>NoseWheels</object-name>
+    <object-name>NoseGear</object-name>
+    <object-name>NoseGearS1</object-name>
+    <object-name>NoseGearS2</object-name>
+    <object-name>NoseGearS3</object-name>
+    <object-name>NoseGearS4</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor>-100</factor>
+    <offset-deg>100</offset-deg>
+    <center>
+      <x-m>-1</x-m>
+      <y-m> 0</y-m>
+      <z-m>-0.1</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorsN1</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-2.55</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorsN2L</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>-50</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>-2.225</x1-m>
+      <y1-m>-0.343</y1-m>
+      <z1-m>-0.226</z1-m>
+      <x2-m>-1.936</x2-m>
+      <y2-m>-0.339</y2-m>
+      <z2-m>-0.217</z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorsN2R</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>50</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>-2.225</x1-m>
+      <y1-m> 0.343</y1-m>
+      <z1-m>-0.226</z1-m>
+      <x2-m>-1.936</x2-m>
+      <y2-m> 0.339</y2-m>
+      <z2-m>-0.217</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorsN3</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor>-80</factor>
+    <center>
+      <x-m>-1.05</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.34</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <x>0</x>
+    </axis>
+  </animation>
+
+  <!-- Left main gear -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors1L</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>-80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 1.118</x1-m>
+      <y1-m>-1.57</y1-m>
+      <z1-m>-0.14</z1-m>
+      <x2-m> 2.653</x2-m>
+      <y2-m>-1.605</y2-m>
+      <z2-m>-0.185</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors2L</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>-80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.653</x1-m>
+      <y1-m>-1.605</y1-m>
+      <z1-m>-0.185</z1-m>
+      <x2-m> 3.727</x2-m>
+      <y2-m>-1.565</y2-m>
+      <z2-m>-0.203</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearL</object-name>
+    <object-name>BackWheelL</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <factor>-160</factor>
+    <offset-deg>160</offset-deg>
+    <center>
+      <x-m> 2.957</x-m>
+      <y-m>-1.403</y-m>
+      <z-m>-0.335</z-m>
+    </center>
+    <axis>
+      <x>0.27</x>
+      <y>1</y>
+      <z>-0.1</z>
+    </axis>
+  </animation>
+
+
+  <!-- Right main gear -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors1R</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 1.118</x1-m>
+      <y1-m> 1.57</y1-m>
+      <z1-m>-0.14</z1-m>
+      <x2-m> 2.653</x2-m>
+      <y2-m> 1.605</y2-m>
+      <z2-m>-0.185</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Doors2R</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.2</ind><dep>80</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> 2.653</x1-m>
+      <y1-m> 1.605</y1-m>
+      <z1-m>-0.185</z1-m>
+      <x2-m> 3.727</x2-m>
+      <y2-m> 1.565</y2-m>
+      <z2-m>-0.203</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearR</object-name>
+    <object-name>BackWheelR</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <factor>-160</factor>
+    <offset-deg>160</offset-deg>
+    <center>
+      <x-m> 2.957</x-m>
+      <y-m> 1.403</y-m>
+      <z-m>-0.335</z-m>
+    </center>
+    <axis>
+      <x>-0.27</x>
+      <y>1</y>
+      <z>0.1</z>
+    </axis>
+  </animation>
+  
 </PropertyList>
-
