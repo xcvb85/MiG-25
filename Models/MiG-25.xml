@@ -9,6 +9,10 @@
     <z-m>0</z-m>
   </offsets>
 
+	<model>
+		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
+	</model>
+
   <!-- fuselage reflection -->
   <effect>
     <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
