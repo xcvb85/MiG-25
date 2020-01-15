@@ -720,7 +720,7 @@
                         <property>aero/coefficients/Crd</property>
                         <property>aero/coefficients/Cry</property>
                         <property>aero/coefficients/Cra</property>
-                        <property>aero/coefficients/Crr</property>
+                        <!--<property>aero/coefficients/Crr</property>-->
                     </sum>
                 </product>
             </function>
@@ -736,7 +736,7 @@
                         <property>aero/coefficients/Cpa</property>
                         <property>aero/coefficients/Cpe</property>
                         <property>aero/coefficients/Cpd</property>
-                        <property>aero/coefficients/Cpr</property>
+                        <!--<property>aero/coefficients/Cpr</property>-->
                     </sum>
                 </product>
             </function>
