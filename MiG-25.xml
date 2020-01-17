@@ -15,14 +15,14 @@
  <metrics>
    <wingarea  unit="M2"> 61.4 </wingarea> <!-- table 1.2 -->
    <wingspan  unit="M" > 13.4 </wingspan> <!-- table 1.2 -->
-   <wing_incidence>       0.0 </wing_incidence>
+   <wing_incidence>       2.0 </wing_incidence>
    <chord     unit="M" >  5.0 </chord> <!-- table 1.2 -->
    <htailarea unit="M2">  4.0 </htailarea>
    <htailarm  unit="M" > 10.0 </htailarm>
    <vtailarea unit="M2">  7.0 </vtailarea>
    <vtailarm  unit="M" >  9.0 </vtailarm>
    <location name="AERORP" unit="M">
-     <x> 5.0 </x>
+     <x> 3.6 </x>
      <y> 0.0 </y>
      <z> 0.5 </z>
    </location>
@@ -397,29 +397,26 @@
 
  <aerodynamics>
     <function name="aero/coefficients/Cla">
-      <description>Lift due to alpha</description>
-      <product>
-          <table>
-            <independentVar lookup="row">aero/alpha-deg</independentVar>
-            <independentVar lookup="column">velocities/mach</independentVar>
-            <tableData> <!-- figure 2.6 -->
-                   0.25  0.50  0.75  1.00  1.25  1.50  1.75  2.00  2.25  2.50
-               -2 -0.12 -0.13 -0.14 -0.16 -0.13 -0.10 -0.09 -0.08 -0.07 -0.07
-                0  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-                2  0.12  0.13  0.14  0.16  0.13  0.10  0.09  0.08  0.07  0.07
-                4  0.24  0.25  0.27  0.30  0.25  0.20  0.17  0.16  0.15  0.15
-                6  0.36  0.37  0.40  0.45  0.35  0.30  0.26  0.24  0.22  0.21
-                8  0.48  0.49  0.54  0.60  0.47  0.40  0.35  0.32  0.30  0.29
-               10  0.60  0.61  0.66  0.73  0.60  0.50  0.44  0.40  0.37  0.35
-               12  0.72  0.73  0.78  0.84  0.68  0.58  0.53  0.49  0.45  0.43
-               14  0.84  0.85  0.90  0.95  0.00  0.00  0.00  0.00  0.00  0.00
-               16  0.96  0.97  1.03  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-               18  1.07  1.08  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-            </tableData>
-          </table>
-      </product>
+       <description>Lift due to alpha</description>
+       <table>
+          <independentVar lookup="row">aero/alpha-deg</independentVar>
+          <independentVar lookup="column">velocities/mach</independentVar>
+          <tableData> <!-- figure 2.6 -->
+                    0.25   0.50   0.75   1.00   1.25   1.50   1.75   2.00   2.25   2.50
+               -2  -0.20  -0.21  -0.22  -0.24  -0.21  -0.18  -0.17  -0.16  -0.15  -0.15
+                0  -0.04  -0.04  -0.04  -0.04  -0.04  -0.04  -0.04  -0.04  -0.04  -0.04
+                2   0.11   0.12   0.13   0.15   0.12   0.09   0.08   0.07   0.06   0.06
+                4   0.26   0.27   0.29   0.32   0.27   0.22   0.19   0.18   0.17   0.17
+                6   0.40   0.41   0.44   0.49   0.39   0.34   0.30   0.28   0.26   0.25
+                8   0.55   0.56   0.61   0.67   0.54   0.47   0.42   0.39   0.37   0.36
+               10   0.70   0.71   0.76   0.83   0.70   0.60   0.54   0.50   0.47   0.45
+               12   0.85   0.86   0.91   0.97   0.81   0.71   0.66   0.62   0.58   0.56
+               14   0.96   0.97   1.02   1.07   0.81   0.71   0.66   0.62   0.58   0.56
+               16   1.06   1.07   1.13   1.07   0.81   0.71   0.66   0.62   0.58   0.56
+               18   1.11   1.12   1.13   1.07   0.81   0.71   0.66   0.62   0.58   0.56
+          </tableData>
+       </table>
     </function>
-
     <function name="aero/coefficients/Clf">
        <description>Delta Lift due to flaps</description>
        <product>
@@ -427,12 +424,34 @@
            <value>0.008</value> <!-- figure 8.10, 0.2/25° -->
        </product>
     </function>
-
+    <function name="aero/coefficients/Clg">
+       <description>Delta Lift due to ground effect</description>
+       <table>
+          <independentVar lookup="row">position/h-agl-ft</independentVar>
+          <tableData>
+               0  	0.1039090
+               3  	0.0844895
+               5  	0.0669446
+               7  	0.0542444
+              10  	0.0419074
+              13  	0.0310507
+              16  	0.0209326
+              20  	0.0119226
+              23  	0.0081328
+              26  	0.0054696
+              29  	0.0035576
+              31  	0.0027785
+              33  	0.0012513
+              34  	0.0001122
+              50  	0.0
+          </tableData>
+       </table>
+    </function>
     <function name="aero/coefficients/Cle">
        <description>Lift due to Elevator Deflection</description>
        <product>
            <property>fcs/elevator-pos-rad</property>
-           <value>0.2</value>
+           <value>0.1</value>
        </product>
     </function>
 
@@ -455,7 +474,6 @@
           </table>
        </product>
     </function>
-
     <function name="aero/coefficients/Cdm">
        <description>Drag due to mach</description>
         <product>
@@ -474,7 +492,6 @@
           </table>
         </product>
     </function>
-
     <function name="aero/coefficients/Cdf">
        <description>Drag due to flaps</description>
          <product>
@@ -482,7 +499,6 @@
            <value> 0.0008 </value> <!-- figure 8.2 -->
          </product>
     </function>
-
     <function name="aero/coefficients/Cdg">
        <description>Drag due to gear</description>
          <product>
@@ -490,7 +506,6 @@
            <value>0.016</value> <!-- figure 8.2, 0.0016 in figure 2.10 seems wrong -->
          </product>
     </function>
-
     <function name="aero/coefficients/Cdb">
        <description>Drag due to speedbrakes</description>
          <product>
@@ -498,7 +513,6 @@
            <value>0.021</value> <!-- figure 2.10 -->
          </product>
     </function>
-
     <function name="aero/coefficients/Cds">
        <description>Drag due to sideslip</description>
        <product>
@@ -514,7 +528,6 @@
           </table>
        </product>
     </function>
-
     <function name="aero/coefficients/Cde">
        <description>Drag due to Elevator Deflection</description>
        <product>
@@ -538,7 +551,6 @@
            <value>-0.1</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Crd">
        <description>Roll moment due to roll rate</description>
        <product>
@@ -547,7 +559,6 @@
            <value>-0.4</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cry">
        <description>Roll moment due to yaw rate</description>
        <product>
@@ -556,7 +567,6 @@
            <value>0.15</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cra">
        <description>Roll moment due to aileron</description>
        <product>
@@ -564,7 +574,6 @@
           <value>0.12</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Crr">
        <description>Roll moment due to rudder</description>
        <product>
@@ -577,10 +586,9 @@
        <description>Pitch moment due to alpha</description>
        <product>
            <property>aero/alpha-rad</property>
-           <value>-0.3</value>
+           <value>-1</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cpe">
        <description>Pitch moment due to elevator</description>
        <product>
@@ -594,7 +602,6 @@
           </table>
        </product>
     </function>
-
     <function name="aero/coefficients/Cpd">
        <description>Pitch moment due to pitch rate</description>
        <product>
@@ -603,7 +610,6 @@
            <value>-18</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cpr">
        <description>Pitch moment due to alpha rate</description>
        <product>
@@ -620,7 +626,6 @@
            <value>0.09</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cyd">
        <description>Yaw damp</description>
        <product>
@@ -629,24 +634,32 @@
            <value>-1.15</value>
        </product>
     </function>
-
     <function name="aero/coefficients/Cyr">
        <description>Yaw moment due to rudder</description>
        <product>
            <property>fcs/rudder-pos-rad</property>
-           <table>
-               <independentVar lookup="row">velocities/mach</independentVar>
-               <tableData> <!-- control effectivity from f-14, TODO -->
-                   0.00  1.0
-                   1.00  0.6
-                   2.40  0.3
-               </tableData>
-           </table>
            <value>-0.1</value>
        </product>
     </function>
 
-    <function name="aero/coefficients/Csy">
+    <function name="aero/coefficients/Cmr">
+       <description>Roll stability due to mach</description>
+       <product>
+           <table>
+             <independentVar lookup="row">velocities/mach</independentVar>
+             <tableData> <!-- fig. 5.19, TODO: alpha dependency -->
+               0.0   0.0005
+               0.5   0.0005
+               1.0   0.0009
+               1.5   0.0014
+               2.0   0.0013
+               2.5   0.0010
+             </tableData>
+           </table>
+           <value>2000</value> <!-- normalize to 1.0 -->
+       </product>
+    </function>
+    <function name="aero/coefficients/Cmy">
        <description>Yaw stability due to mach</description>
        <product>
            <table>
@@ -673,6 +686,7 @@
                     <sum>
                         <property>aero/coefficients/Cla</property> <!-- OK -->
                         <property>aero/coefficients/Clf</property> <!-- OK -->
+                        <property>aero/coefficients/Clg</property>
                         <property>aero/coefficients/Cle</property>
                     </sum>
                 </product>
@@ -720,8 +734,9 @@
                         <property>aero/coefficients/Crd</property>
                         <property>aero/coefficients/Cry</property>
                         <property>aero/coefficients/Cra</property>
-                        <!--<property>aero/coefficients/Crr</property>-->
+                        <property>aero/coefficients/Crr</property>
                     </sum>
+                    <property>aero/coefficients/Cmr</property> <!-- OK -->
                 </product>
             </function>
         </axis>
@@ -753,19 +768,15 @@
                         <property>aero/coefficients/Cyd</property>
                         <property>aero/coefficients/Cyr</property>
                     </sum>
-                    <property>aero/coefficients/Csy</property> <!-- OK -->
+                    <property>aero/coefficients/Cmy</property> <!-- OK -->
                  </product>
             </function>
         </axis>
  </aerodynamics>
 <!--
  <output name="/tmp/jsbsim.csv" type="CSV" rate="10">
-        <property>aero/force/LIFT</property>
-        <property>aero/force/DRAG</property>
-        <property>aero/force/SIDE</property>
-        <property>aero/force/ROLL</property>
-        <property>aero/force/PITCH</property>
-        <property>aero/force/YAW</property>
+          <property>position/h-agl-ft</property>
+          <property>velocities/u-fps</property>
  </output>
 -->
 </fdm_config>
