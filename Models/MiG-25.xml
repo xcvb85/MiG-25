@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <path>MiG-25.ac</path>
   <offsets>
@@ -8,8 +9,11 @@
     <z-m>0</z-m>
   </offsets>
 
+	<model>
+		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
+	</model>
+
   <!-- fuselage reflection -->
-  <!--
   <effect>
     <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
     <object-name>Cone</object-name>
@@ -44,7 +48,7 @@
     <object-name>AirbrakeTop</object-name>
     <object-name>Airbrake</object-name>
   </effect>
-  -->
+
   <model>
     <path>Effects/afterburner.xml</path>
     <condition>
@@ -463,4 +467,3 @@
   </animation>
   
 </PropertyList>
-
