@@ -159,7 +159,7 @@
     <type>rotate</type>
     <object-name>FlapL</object-name>
     <property>/surface-positions/flap-pos-norm</property>
-    <factor>40</factor> <!-- FIXME -->
+    <factor>25</factor>
     <axis>
       <x1-m> 6.36606</x1-m>
       <y1-m>-3.59139</y1-m>
@@ -174,7 +174,7 @@
     <type>rotate</type>
     <object-name>FlapR</object-name>
     <property>/surface-positions/flap-pos-norm</property>
-    <factor>40</factor> <!-- FIXME -->
+    <factor>25</factor>
     <axis>
       <x1-m>5.74199</x1-m>
       <y1-m>1.53995</y1-m>
