@@ -6,6 +6,10 @@
       <long-description>The MiG-25 Foxbat is a record-breaking supersonic interceptor/reconnaissance aircraft. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
       <flight-model>jsb</flight-model>
       <aero>MiG-25</aero>
+      <flaps>
+         <setting>0.0</setting>
+         <setting>1.0</setting>
+      </flaps>
       <model>
          <path>Aircraft/MiG-25/Models/MiG-25.xml</path>
       </model>

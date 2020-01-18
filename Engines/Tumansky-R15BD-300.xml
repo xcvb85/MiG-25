@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <turbine_engine name="Tumansky R-15BD-300">
-  <milthrust unit="N">  73551 </milthrust> <!-- source:  -->
-  <maxthrust unit="N"> 109871 </maxthrust> <!-- source:  -->
+  <milthrust unit="N">  73551 </milthrust> <!-- source: Turbofan and turbojet engines: database handbook, p.386 -->
+  <maxthrust unit="N"> 109871 </maxthrust> <!-- source: Turbofan and turbojet engines: database handbook, p.386 -->
   <tsfc>            1.25 </tsfc>        <!-- source: wikipedia :( -->
   <atsfc>           2.70 </atsfc>       <!-- source: wikipedia :( -->
   <bleed>           0.03 </bleed>
@@ -17,7 +17,7 @@
    <table>
     <independentVar lookup="row">velocities/mach</independentVar>
     <independentVar lookup="column">atmosphere/density-altitude</independentVar>
-    <tableData>
+    <tableData> <!-- figure 3.27 -->
 		0	16400	36000	65600
 	0.0	0.041	0.027	0.014	0.010
 	0.2	0.041	0.027	0.014	0.010
@@ -40,7 +40,7 @@
    <table>
     <independentVar lookup="row">velocities/mach</independentVar>
     <independentVar lookup="column">atmosphere/density-altitude</independentVar>
-    <tableData>
+    <tableData> <!-- figure 3.26 -->
 		0	16400	36000	65600
 	0.0	1.000	0.000	0.000	0.000
 	0.2	0.890	0.000	0.000	0.000
@@ -63,7 +63,7 @@
    <table>
     <independentVar lookup="row">velocities/mach</independentVar>
     <independentVar lookup="column">atmosphere/density-altitude</independentVar>
-    <tableData>
+    <tableData> <!-- figure 3.25 -->
 		0	16400	36000	65600
 	0.0	1.000	0.000	0.000	0.000
 	0.2	0.954	0.000	0.000	0.000
@@ -81,5 +81,4 @@
     </tableData>
    </table>
   </function>
-
 </turbine_engine>
