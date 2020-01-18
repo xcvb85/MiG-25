@@ -163,7 +163,7 @@
     <type>rotate</type>
     <object-name>FlapL</object-name>
     <property>/surface-positions/flap-pos-norm</property>
-    <factor>40</factor> <!-- FIXME -->
+    <factor>25</factor>
     <axis>
       <x1-m> 6.36606</x1-m>
       <y1-m>-3.59139</y1-m>
@@ -178,7 +178,7 @@
     <type>rotate</type>
     <object-name>FlapR</object-name>
     <property>/surface-positions/flap-pos-norm</property>
-    <factor>40</factor> <!-- FIXME -->
+    <factor>25</factor>
     <axis>
       <x1-m>5.74199</x1-m>
       <y1-m>1.53995</y1-m>
@@ -189,7 +189,30 @@
     </axis>
   </animation>
 
-  <!-- Landing gear -->
+  <!-- speedbrakes -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Airbrake</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>45</factor>
+    <center>
+      <x-m> 8.50</x-m>
+      <y-m> 0.00</y-m>
+      <z-m>-0.39</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!-- Landing gear
+       FIXME some more documentation the gears are needed
+             correct the retraction animations, especially the main gears
+  -->
+
+  <!-- Nose gear -->
   <animation>
     <type>select</type>
     <object-name>NoseWheels</object-name>
@@ -307,6 +330,24 @@
       <x>0</x>
       <y>1</y>
       <x>0</x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>NoseGearS4</object-name>
+    <object-name>NoseWheels</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>-70</factor>
+    <center>
+      <x-m>-1.478</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.397</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
     </axis>
   </animation>
 
