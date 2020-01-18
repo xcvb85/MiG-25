@@ -185,6 +185,24 @@
     </axis>
   </animation>
 
+  <!-- speedbrakes -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Airbrake</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>45</factor>
+    <center>
+      <x-m> 8.50</x-m>
+      <y-m> 0.00</y-m>
+      <z-m>-0.39</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
   <!-- Landing gear
        FIXME some more documentation the gears are needed
              correct the retraction animations, especially the main gears
