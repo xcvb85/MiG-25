@@ -111,7 +111,10 @@
     <type>rotate</type>
     <object-name>AileronL</object-name>
     <property>/surface-positions/left-aileron-pos-norm</property>
-    <factor>20</factor> <!-- FIXME -->
+    <interpolation>
+      <entry><ind>1</ind><dep>20</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+    </interpolation> <!-- FIXME once this get's added to FCS-->
     <axis>
       <x1-m> 6.949</x1-m>
       <y1-m>-5.301</y1-m>
@@ -126,7 +129,10 @@
     <type>rotate</type>
     <object-name>AileronR</object-name>
     <property>/surface-positions/right-aileron-pos-norm</property>
-    <factor>20</factor> <!-- FIXME -->
+    <interpolation>
+      <entry><ind>-1</ind><dep>-20</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+    </interpolation> <!-- FIXME once this get's added to FCS-->
     <axis>
       <x1-m>6.949</x1-m>
       <y1-m>5.301</y1-m>
