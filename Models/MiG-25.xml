@@ -150,9 +150,9 @@
     <object-name>HStabL</object-name>
     <object-name>HStabR</object-name>
     <property>/surface-positions/elevator-pos-norm</property>
-    <factor>15</factor> <!-- FIXME -->
+    <factor>10</factor> <!-- FIXME -->
     <center>
-      <x-m>8.6</x-m> <!-- only eyeballed, needs verification -->
+      <x-m>9</x-m>
       <y-m>0</y-m>
       <z-m>0.009</z-m>
     </center>
