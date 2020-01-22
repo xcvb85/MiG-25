@@ -35,4 +35,14 @@
          <reverser-pos-norm type="double">0</reverser-pos-norm>
       </engine>
    </engines>
+   <fdm>
+     <jsbsim>
+       <systems>
+	 <brakes>
+	   <brake-left-cmd type="float" alias="/controls/gear/brake-left"/>
+	   <brake-right-cmd type="float" alias="/controls/gear/brake-right"/>
+	 </brakes>
+       </systems>
+     </jsbsim>
+   </fdm>
 </PropertyList>
