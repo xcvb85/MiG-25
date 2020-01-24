@@ -47,6 +47,7 @@
     <object-name>DoorsN3</object-name>
     <object-name>AirbrakeTop</object-name>
     <object-name>Airbrake</object-name>
+    <object-name>DragChuteFairing</object-name>
   </effect>
 
   <model>
@@ -213,6 +214,74 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AirbrakeTop</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>45</factor>
+    <center>
+      <x-m>7.357</x-m>
+      <y-m>0.000</y-m>
+      <z-m>0.970</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!--
+  <animation>
+    <type>rotate</type>
+    <object-name>piston</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    
+    <interpolation>
+      <entry><ind>0</ind><dep></dep>-48</entry>
+      <entry><ind>1</ind><dep></dep>0</entry>
+      </interpolation>
+    
+    <factor>0.0208</factor> -1/48
+    <center>
+      <x-m>7.955</x-m>
+      <y-m>0.000</y-m>
+      <z-m>1.257</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Airbrake-actuator</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>0</factor>
+    <center>
+      <x-m>8.895</x-m>
+      <y-m>0.000</y-m>
+      <z-m>0.828</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  -->
+      <!--
+      <x1-m>7.955</x1-m>
+      <y1-m>0.000</y1-m>
+      <z1-m>1.257</z1-m>
+      <x2-m>8.895</x2-m>
+      <y2-m></y2-m>
+      <z2-m></z2-m>
+      -->
+      
   <!-- Landing gear
        FIXME some more documentation the gears are needed
              correct the retraction animations, especially the main gears
