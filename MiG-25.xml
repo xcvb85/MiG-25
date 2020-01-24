@@ -395,6 +395,8 @@
   </channel>
  </flight_control>
 
+ <system file="brake"/>
+ 
  <aerodynamics>
     <function name="aero/coefficients/Cla">
        <description>Lift due to alpha</description>

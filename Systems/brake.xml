@@ -4,42 +4,36 @@
 
     <fcs_function name="systems/brakes/brake-left">
       <function>
-	<max>
-	  <difference>
+	<difference>
+	  <property>systems/brakes/brake-left-cmd</property>
+	  <product>
 	    <property>systems/brakes/brake-left-cmd</property>
-	    <product>
-	      <property>sytems/brakes/brake-left-cmd</property>
-	      <abs>
-		<min>
-		  <property>fcs/rudder-pos-norm</property>
-		  <value>0</value>
-		</min>
-	      </abs>
-	    </product>
-	  </difference>
-	  <property>gear/unit[1]/chocks/force-norm</property>
-	</max>
+	    <abs>
+	      <min>
+		<property>fcs/rudder-pos-norm</property>
+		<value>0</value>
+	      </min>
+	    </abs>
+	  </product>
+	</difference>
       </function>
       <output>fcs/left-brake-cmd-norm</output>
     </fcs_function>
 
     <fcs_function name="systems/brakes/brake-right">
       <function>
-	<max>
-	  <difference>
-	    <property>systems/brakesbrake-right-cmd</property>
-	    <product>
-	      <property>systems/brakes/brake-right-cmd</property>
-	      <abs>
-		<max>
-		  <property>fcs/rudder-pos-norm</property>
-		  <value>0</value>
-		</max>
-	      </abs>
-	    </product>
-	  </difference>
-	  <property>gear/unit[2]/chocks/force-norm</property>
-	</max>
+	<difference>
+	  <property>systems/brakes/brake-right-cmd</property>
+	  <product>
+	    <property>systems/brakes/brake-right-cmd</property>
+	    <abs>
+	      <max>
+		<property>fcs/rudder-pos-norm</property>
+		<value>0</value>
+	      </max>
+	    </abs>
+	  </product>
+	</difference>
       </function>
       <output>fcs/right-brake-cmd-norm</output>
     </fcs_function>
