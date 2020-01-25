@@ -41,6 +41,7 @@
 	 <brakes>
 	   <brake-left-cmd type="float" alias="/controls/gear/brake-left"/>
 	   <brake-right-cmd type="float" alias="/controls/gear/brake-right"/>
+	   <brake-parking type="bool" alias="/controls/gear/brake-parking"/>
 	 </brakes>
        </systems>
      </jsbsim>

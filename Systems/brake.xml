@@ -1,13 +1,27 @@
 <system name="brakes">
 
-  <channel name="differential brakes">
+  <channel name="brakes">
+    
+    <switch name="systems/brakes/brake-left-norm">
+      <default value="systems/brakes/brake-left-cmd"/>
+      <test value="1">
+	systems/brakes/brake-parking eq 1
+      </test>
+    </switch>
+    
+    <switch name="systems/brakes/brake-right-norm">
+      <default value="systems/brakes/brake-right-cmd"/>
+      <test value="1">
+	systems/brakes/brake-parking eq 1
+      </test>
+    </switch>
 
     <fcs_function name="systems/brakes/brake-left">
       <function>
 	<difference>
-	  <property>systems/brakes/brake-left-cmd</property>
+	  <property>systems/brakes/brake-left-norm</property>
 	  <product>
-	    <property>systems/brakes/brake-left-cmd</property>
+	    <property>systems/brakes/brake-left-norm</property>
 	    <abs>
 	      <min>
 		<property>fcs/rudder-pos-norm</property>
@@ -23,9 +37,9 @@
     <fcs_function name="systems/brakes/brake-right">
       <function>
 	<difference>
-	  <property>systems/brakes/brake-right-cmd</property>
+	  <property>systems/brakes/brake-right-norm</property>
 	  <product>
-	    <property>systems/brakes/brake-right-cmd</property>
+	    <property>systems/brakes/brake-right-norm</property>
 	    <abs>
 	      <max>
 		<property>fcs/rudder-pos-norm</property>
