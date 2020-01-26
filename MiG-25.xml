@@ -62,7 +62,7 @@
    <rolling_friction> 0.02 </rolling_friction>
    <spring_coeff unit="LBS/FT">      40000 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
-   <max_steer unit="DEG"> 5.00 </max_steer>
+   <max_steer unit="DEG">360</max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
   </contact>
@@ -395,6 +395,8 @@
   </channel>
  </flight_control>
 
+ <system file="brake"/>
+ 
  <aerodynamics>
     <function name="aero/coefficients/Cla">
        <description>Lift due to alpha</description>
