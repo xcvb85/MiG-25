@@ -314,7 +314,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>NoseWheels</object-name>
     <object-name>NoseGear</object-name>
     <property>gear/gear[0]/position-norm</property>
     <factor>-100</factor>
