@@ -62,7 +62,7 @@
    <rolling_friction> 0.02 </rolling_friction>
    <spring_coeff unit="LBS/FT">      40000 </spring_coeff>
    <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
-   <max_steer unit="DEG"> 5.00 </max_steer>
+   <max_steer unit="DEG">360</max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
   </contact>
@@ -208,9 +208,10 @@
   </tank>
  </propulsion>
 
-  <flight_control file="Systems/jsb-controls"/>
-  <aerodynamics file="MiG-25-aerodynamics.xml"/>
-  <system file="jsb-electric"/>
+ <flight_control file="Systems/jsb-controls"/>
+ <aerodynamics file="MiG-25-aerodynamics.xml"/>
+ <system file="jsb-brake"/>
+ <system file="jsb-electric"/>
 
 <!--
  <output name="/tmp/jsbsim.csv" type="CSV" rate="10">
