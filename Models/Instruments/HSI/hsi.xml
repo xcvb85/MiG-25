@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+  <path>hsi.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+</PropertyList>
