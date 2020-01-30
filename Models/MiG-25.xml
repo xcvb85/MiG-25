@@ -9,9 +9,9 @@
     <z-m>0</z-m>
   </offsets>
 
-	<model>
-		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
-	</model>
+  <model>
+    <path>Aircraft/MiG-25/Models/Cockpit.xml</path>
+  </model>
 
   <!-- fuselage reflection -->
   <effect>
@@ -477,8 +477,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>GearL</object-name>
-    <object-name>BackWheelL</object-name>
+    <object-name>GearS1L</object-name>
     <property>gear/gear[1]/position-norm</property>
     <factor>-160</factor>
     <offset-deg>160</offset-deg>
@@ -494,7 +493,23 @@
     </axis>
   </animation>
 
-
+  <animation>
+    <type>rotate</type>
+    <object-name>GearL_arm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>42</factor>
+    <center>
+      <x-m> 3.264</x-m>
+      <y-m>-1.587</y-m>
+      <z-m>-0.775</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+      
   <!-- Right main gear -->
   
   <animation>
@@ -535,8 +550,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>GearR</object-name>
-    <object-name>BackWheelR</object-name>
+    <object-name>GearS1R</object-name>
     <property>gear/gear[2]/position-norm</property>
     <factor>-160</factor>
     <offset-deg>160</offset-deg>
@@ -549,6 +563,23 @@
       <x>-0.27</x>
       <y>1</y>
       <z>0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearR_arm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>42</factor>
+    <center>
+      <x-m> 3.264</x-m>
+      <y-m> 1.587</y-m>
+      <z-m>-0.775</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
     </axis>
   </animation>
   
