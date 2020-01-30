@@ -15,9 +15,9 @@
 		<name>DME</name>
 		<path>Aircraft/MiG-25/Models/Instruments/DME/DME.xml</path>
 		<offsets>
-			<x-m>-3.72</x-m>
+			<x-m>-3.62</x-m>
 			<y-m> 0.09</y-m>
-			<z-m> 1.13</z-m>
+			<z-m> 1.11</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -26,9 +26,9 @@
 		<name>ASI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI1.xml</path>
 		<offsets>
-			<x-m>-3.68</x-m>
-			<y-m>-0.17</y-m>
-			<z-m> 1.00</z-m>
+			<x-m>-3.588</x-m>
+			<y-m>-0.190</y-m>
+			<z-m> 0.987</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -37,9 +37,9 @@
 		<name>AI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/AI/AI.xml</path>
 		<offsets>
-			<x-m>-3.69</x-m>
+			<x-m>-3.59</x-m>
 			<y-m>-0.05</y-m>
-			<z-m> 1.05</z-m>
+			<z-m> 1.03</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -48,9 +48,9 @@
 		<name>VSI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/VSI/VSI.xml</path>
 		<offsets>
-			<x-m>-3.69</x-m>
+			<x-m>-3.59</x-m>
 			<y-m> 0.07</y-m>
-			<z-m> 1.03</z-m>
+			<z-m> 1.02</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -59,9 +59,9 @@
 		<name>ASI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI2.xml</path>
 		<offsets>
-			<x-m>-3.68</x-m>
-			<y-m>-0.20</y-m>
-			<z-m> 0.89</z-m>
+			<x-m>-3.577</x-m>
+			<y-m>-0.188</y-m>
+			<z-m> 0.895</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -70,9 +70,9 @@
 		<name>HSI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/HSI/hsi.xml</path>
 		<offsets>
-			<x-m>-3.685</x-m>
+			<x-m>-3.583</x-m>
 			<y-m>-0.073</y-m>
-			<z-m> 0.898</z-m>
+			<z-m> 0.863</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -81,9 +81,9 @@
 		<name>Radar</name>
 		<path>Aircraft/MiG-25/Models/Instruments/Radar/Radar.xml</path>
 		<offsets>
-			<x-m>-3.719</x-m>
+			<x-m>-3.618</x-m>
 			<y-m> 0.077</y-m>
-			<z-m> 0.858</z-m>
+			<z-m> 0.828</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -92,9 +92,9 @@
 		<name>RALT</name>
 		<path>Aircraft/MiG-25/Models/Instruments/RALT/RALT.xml</path>
 		<offsets>
-			<x-m>-3.671</x-m>
-			<y-m>-0.302</y-m>
-			<z-m> 0.792</z-m>
+			<x-m>-3.568</x-m>
+			<y-m>-0.301</y-m>
+			<z-m> 0.762</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
@@ -103,9 +103,9 @@
 		<name>Clock</name>
 		<path>Aircraft/MiG-25/Models/Instruments/clock/clock.xml</path>
 		<offsets>
-			<x-m>-3.65</x-m>
-			<y-m>-0.20</y-m>
-			<z-m> 0.80</z-m>
+			<x-m>-3.568</x-m>
+			<y-m>-0.188</y-m>
+			<z-m> 0.790</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
