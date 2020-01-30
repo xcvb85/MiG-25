@@ -9,9 +9,9 @@
     <z-m>0</z-m>
   </offsets>
 
-	<model>
-		<path>Aircraft/MiG-25/Models/Cockpit.xml</path>
-	</model>
+  <model>
+    <path>Aircraft/MiG-25/Models/Cockpit.xml</path>
+  </model>
 
   <!-- fuselage reflection -->
   <effect>
@@ -47,6 +47,7 @@
     <object-name>DoorsN3</object-name>
     <object-name>AirbrakeTop</object-name>
     <object-name>Airbrake</object-name>
+    <object-name>DragChuteFairing</object-name>
   </effect>
 
   <model>
@@ -111,7 +112,10 @@
     <type>rotate</type>
     <object-name>AileronL</object-name>
     <property>/surface-positions/left-aileron-pos-norm</property>
-    <factor>20</factor> <!-- FIXME -->
+    <interpolation>
+      <entry><ind>1</ind><dep>20</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+    </interpolation> <!-- FIXME once this get's added to FCS-->
     <axis>
       <x1-m> 6.949</x1-m>
       <y1-m>-5.301</y1-m>
@@ -126,7 +130,10 @@
     <type>rotate</type>
     <object-name>AileronR</object-name>
     <property>/surface-positions/right-aileron-pos-norm</property>
-    <factor>20</factor> <!-- FIXME -->
+    <interpolation>
+      <entry><ind>-1</ind><dep>-20</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+    </interpolation> <!-- FIXME once this get's added to FCS-->
     <axis>
       <x1-m>6.949</x1-m>
       <y1-m>5.301</y1-m>
@@ -144,9 +151,9 @@
     <object-name>HStabL</object-name>
     <object-name>HStabR</object-name>
     <property>/surface-positions/elevator-pos-norm</property>
-    <factor>15</factor> <!-- FIXME -->
+    <factor>10</factor> <!-- FIXME -->
     <center>
-      <x-m>8.6</x-m> <!-- only eyeballed, needs verification -->
+      <x-m>9</x-m>
       <y-m>0</y-m>
       <z-m>0.009</z-m>
     </center>
@@ -207,6 +214,67 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AirbrakeTop</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>45</factor>
+    <center>
+      <x-m>7.357</x-m>
+      <y-m>0.000</y-m>
+      <z-m>0.970</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>locked-track</type>
+    <object-name>Airbrake-actuator</object-name>
+    <object-name>piston</object-name>
+    <center>
+      <x-m>8.895</x-m>
+      <y.m>0.000</y.m>
+      <z-m>0.828</z-m>
+    </center>
+    <lock-axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </lock-axis>
+    <track-axis>
+      <x>-0.958</x>
+      <y> 0.000</y>
+      <z> 0.291</z>
+    </track-axis>
+
+    <target-name>AirbrakeTop</target-name>
+    <target-center>
+      <x-m>7.937</x-m>
+      <y-m>0.000</y-m>
+      <z-m>1.119</z-m>
+    </target-center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>piston</object-name>
+    <property>/surface-positions/speedbrake-pos-norm</property>
+    <factor>-0.4</factor>
+    <axis>
+      <x1-m>7.937</x1-m>
+      <y1-m>0.000</y1-m>
+      <z1-m>1.119</z1-m>
+      <x2-m>9.103</x2-m>
+      <y2-m>0.000</y2-m>
+      <z2-m>0.602</z2-m>
+    </axis>
+  </animation>
+      
   <!-- Landing gear
        FIXME some more documentation the gears are needed
              correct the retraction animations, especially the main gears
@@ -217,10 +285,6 @@
     <type>select</type>
     <object-name>NoseWheels</object-name>
     <object-name>NoseGear</object-name>
-    <object-name>NoseGearS1</object-name>
-    <object-name>NoseGearS2</object-name>
-    <object-name>NoseGearS3</object-name>
-    <object-name>NoseGearS4</object-name>
     <object-name>BackWheelL</object-name>
     <object-name>BackWheelR</object-name>
     <object-name>GearL</object-name>
@@ -239,12 +303,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>NoseWheels</object-name>
     <object-name>NoseGear</object-name>
-    <object-name>NoseGearS1</object-name>
-    <object-name>NoseGearS2</object-name>
-    <object-name>NoseGearS3</object-name>
-    <object-name>NoseGearS4</object-name>
     <property>gear/gear[0]/position-norm</property>
     <factor>-100</factor>
     <offset-deg>100</offset-deg>
@@ -351,6 +410,22 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>NoseGear</object-name>
+    <property>gear/gear[0]/steering-norm</property>
+    <factor>-180</factor>
+    <axis>
+      <x1-m>-1.481</x1-m>
+      <y1-m> 0.000</y1-m>
+      <z1-m>-1.423</z1-m>
+      <x2-m>-1.290</x2-m>
+      <y2-m> 0.000</y2-m>
+      <z2-m>-0.341</z2-m>
+    </axis>
+  </animation>
+      
+      
   <!-- Left main gear -->
   
   <animation>
@@ -391,8 +466,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>GearL</object-name>
-    <object-name>BackWheelL</object-name>
+    <object-name>GearS1L</object-name>
     <property>gear/gear[1]/position-norm</property>
     <factor>-160</factor>
     <offset-deg>160</offset-deg>
@@ -408,7 +482,23 @@
     </axis>
   </animation>
 
-
+  <animation>
+    <type>rotate</type>
+    <object-name>GearL_arm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>42</factor>
+    <center>
+      <x-m> 3.264</x-m>
+      <y-m>-1.587</y-m>
+      <z-m>-0.775</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+      
   <!-- Right main gear -->
   
   <animation>
@@ -449,8 +539,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>GearR</object-name>
-    <object-name>BackWheelR</object-name>
+    <object-name>GearS1R</object-name>
     <property>gear/gear[2]/position-norm</property>
     <factor>-160</factor>
     <offset-deg>160</offset-deg>
@@ -463,6 +552,23 @@
       <x>-0.27</x>
       <y>1</y>
       <z>0.1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GearR_arm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>42</factor>
+    <center>
+      <x-m> 3.264</x-m>
+      <y-m> 1.587</y-m>
+      <z-m>-0.775</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
     </axis>
   </animation>
   
