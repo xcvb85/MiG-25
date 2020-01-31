@@ -16,27 +16,18 @@
   <!-- fuselage reflection -->
   <effect>
     <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
-    <object-name>Cone</object-name>
-    <object-name>Fuselage</object-name>
-    <object-name>Intake</object-name>
-    <object-name>WingL</object-name>
-    <object-name>WingR</object-name>
-    <object-name>VStabL</object-name>
-    <object-name>VStabR</object-name>
     <object-name>AileronL</object-name>
     <object-name>AileronR</object-name>
-    <object-name>FlapL</object-name>
-    <object-name>FlapR</object-name>
-    <object-name>RudderL</object-name>
-    <object-name>RudderR</object-name>
-    <object-name>HStabL</object-name>
-    <object-name>HStabR</object-name>
-    <object-name>FinL</object-name>
-    <object-name>FinR</object-name>
-    <object-name>Fin1L</object-name>
-    <object-name>Fin1R</object-name>
-    <object-name>Fin2L</object-name>
-    <object-name>Fin2R</object-name>
+    <object-name>Airbrake</object-name>
+    <object-name>Airbrake-actuator</object-name>
+    <object-name>piston</object-name>
+    <object-name>AirbrakeBox</object-name>
+    <object-name>AirbrakeTop</object-name>
+    <object-name>AirbrakeTopBox</object-name>
+    <object-name>Antenna</object-name>
+    <object-name>Antennas</object-name>
+    <object-name>BackCanopy</object-name>
+    <object-name>Cone</object-name>
     <object-name>Doors1L</object-name>
     <object-name>Doors1R</object-name>
     <object-name>Doors2L</object-name>
@@ -45,9 +36,61 @@
     <object-name>DoorsN2L</object-name>
     <object-name>DoorsN2R</object-name>
     <object-name>DoorsN3</object-name>
-    <object-name>AirbrakeTop</object-name>
-    <object-name>Airbrake</object-name>
     <object-name>DragChuteFairing</object-name>
+    <object-name>Fans</object-name>
+    <object-name>Fin1L</object-name>
+    <object-name>Fin1R</object-name>
+    <object-name>Fin2L</object-name>
+    <object-name>Fin2R</object-name>
+    <object-name>FinL</object-name>
+    <object-name>FinR</object-name>
+    <object-name>FlapL</object-name>
+    <object-name>FlapR</object-name>
+    <object-name>FrontCanopy</object-name>
+    <object-name>FrontCanopy.001</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>GearBox</object-name>
+    <object-name>GearS1L</object-name>
+    <object-name>GearL</object-name>
+    <object-name>GearL_arm</object-name>
+    <object-name>BackWheelL</object-name>
+    <object-name>GearS1R</object-name>
+    <object-name>GearR</object-name>
+    <object-name>GearR_arm</object-name>
+    <object-name>BackWheelR</object-name>
+    <object-name>GearS2L</object-name>
+    <object-name>GearS2R</object-name>
+    <object-name>HStabL</object-name>
+    <object-name>HStabR</object-name>
+    <object-name>Intake</object-name>
+    <object-name>IntakeStrutL</object-name>
+    <object-name>IntakeStrutR</object-name>
+    <object-name>LEdgeL</object-name>
+    <object-name>LEdgeR</object-name>
+    <object-name>NoseGear</object-name>
+    <object-name>NoseGearS1</object-name>
+    <object-name>NoseGearS2</object-name>
+    <object-name>NoseGearS3</object-name>
+    <object-name>NoseGearS4</object-name>
+    <object-name>NoseWheels</object-name>
+    <object-name>NoseGearBox</object-name>
+    <object-name>Nozzles</object-name>
+    <object-name>Pitot</object-name>
+    <object-name>Pylon1</object-name>
+    <object-name>Pylon2</object-name>
+    <object-name>R-40RL</object-name>
+    <object-name>R-40RR</object-name>
+    <object-name>R-40TL</object-name>
+    <object-name>R-40TR</object-name>
+    <object-name>RudderL</object-name>
+    <object-name>RudderR</object-name>
+    <object-name>Sensor</object-name>
+    <object-name>VStabL</object-name>
+    <object-name>VStabR</object-name>
+    <object-name>WingL</object-name>
+    <object-name>WingR</object-name>
+    <object-name>WingtipL</object-name>
+    <object-name>WingtipR</object-name>
   </effect>
 
   <model>
