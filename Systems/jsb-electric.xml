@@ -1,3 +1,377 @@
 <?xml version="1.0"?>
-<system name="Electrical system">
+<!DOCTYPE system [ <!ENTITY U "systems/electrical"> ]>
+<!-- electrical system, based on pinto's MiG-21bis -->
+
+<system name="electrical">
+  <property value="0">&U;/external-connected</property>
+  <property value="1">&U;/switches/external</property>
+  <property value="0">&U;/switches/battery</property>
+  <property value="1">&U;/switches/inverter</property>
+
+  <property value="45">&U;/sources/batteries-a</property>
+
+  <property value="0">&U;/sources/dc-gen-damage[0]</property>
+  <property value="0">&U;/sources/dc-gen-damage[1]</property>
+  <property value="0">&U;/sources/ac-gen-damage[0]</property>
+  <property value="0">&U;/sources/ac-gen-damage[1]</property>
+  <property value="0">&U;/buses/dc-bus-damage</property>
+  <property value="0">&U;/buses/ac-bus-damage</property>
+  <property value="0">&U;/buses/ac-bus-damage[1]</property>
+  
+  <channel name="sources">
+
+    <switch name="&U;/sources/external-dc">
+      <default value="0"/>
+      <test logic="AND" value="29">
+	&U;/external-connected == 1
+	&U;/switches/external == 1
+      </test>
+    </switch>
+
+    <switch name="&U;/sources/external-ac">
+      <default value="0"/>
+      <test logic="AND" value="115">
+	&U;/external-connected == 1
+	&U;/switches/external == 1
+      </test>
+    </switch>
+    
+    <switch name="&U;/sources/external-phase">
+      <default value="0"/>
+      <test logic="AND" value="37">
+	&U;/external-connected == 1
+	&U;/switches/external == 1
+      </test>
+    </switch>
+    
+    <fcs_function name="&U;/sources/dc-gen[0]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+	    <tableData>
+	      0.0     0.0
+	      30.0    24.0
+	      100.0   28.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/dc-gen-damage[0]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/dc-gen[1]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>	 
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+	    <tableData>
+	      0.0     0.0
+	      30.0    24.0
+	      100.0   28.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/dc-gen-damage[1]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+	
+    <fcs_function name="&U;/sources/ac-gen[0]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+	    <tableData>
+	      0.0     0.0
+	      30.0    112.0
+	      100.0   116.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/ac-gen-damage[0]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/ac-gen[1]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+	    <tableData>
+	      0.0    0.0
+	      30.0   112.0
+	      100.0  116.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/ac-gen-damage[1]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/phase-gen[0]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+	    <tableData>
+	      0.0    0.0
+	      30.0   35.0
+	      100.0  38.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/ac-gen-damage[0]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+	
+    <fcs_function name="&U;/sources/phase-gen[1]">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+	    <tableData>
+	      0.0    0.0
+	      30.0   35.0
+	      100.0  38.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/ac-gen-damage[1]</independentVar>
+	    <tableData>
+	      0.0	1.0
+	      0.35	0.8
+	      1.0	0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/batteries-v">
+      <function>
+	<product>
+	  <difference>
+	    <value>1</value>
+	    <property>&U;/external-connected</property>
+	  </difference>
+	  <property>&U;/switches/external</property>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/batteries-a</independentVar>
+	    <tableData>
+	      0.0	0.0
+	      0.1	13.0
+	      1.0	22.0
+	      90.0	22.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/output-dc">
+      <function>
+	<max>
+	  <property>&U;/sources/batteries-v</property>
+	  <property>&U;/sources/dc-gen[0]</property>
+	  <property>&U;/sources/dc-gen[1]</property>
+	  <property>&U;/sources/external-dc</property>
+	</max>
+      </function>
+    </fcs_function>
+      
+    <fcs_function name="&U;/sources/output-ac">
+      <function>
+	<max>
+	  <property>&U;/sources/ac-gen[0]</property>
+	  <property>&U;/sources/ac-gen[1]</property>
+	  <property>&U;/sources/external-ac</property>
+	</max>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/output-ac[1]">
+      <function>
+	<max>
+	  <property>&U;/sources/phase-gen[0]</property>
+	  <property>&U;/sources/phase-gen[1]</property>
+	  <property>&U;/sources/external-ac</property>
+	</max>
+      </function>
+    </fcs_function>
+
+    
+    <fcs_function name="&U;/sources/inverter-ac">
+      <function>
+	<product>
+	  <property>&U;/switches/inverter</property>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/output-dc</independentVar>
+	    <tableData>
+	      0.0  0.0
+	      24.0 112.0
+	      28.0 115.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/output-ac</independentVar>
+	    <tableData>
+	      0.0 1
+	      111 1
+	      112 0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/sources/inverter-ac[1]">
+      <function>
+	<product>
+	  <property>&U;/switches/inverter</property>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/output-dc</independentVar>
+	    <tableData>
+	      0.0  0.0
+	      24.0 35.0
+	      28.0 37.0
+	    </tableData>
+	  </table>
+	  <table>
+	    <independentVar lookup="row">&U;/sources/output-ac[1]</independentVar>
+	    <tableData>
+	      0.0 1
+	      35  0
+	      37  0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+  </channel>
+
+
+
+  <channel name="buses">
+
+    <pure_gain name="&U;/buses/dc-bus">
+      <input>&U;/sources/output-dc</input>
+      <gain>
+	<table>
+	  <independentVar
+	      lookup="row">&U;/buses/dc-bus-damage</independentVar>
+	  <tableData>
+	    0.0  1.0
+	    0.85 1.0
+	    1.0  0.0
+	  </tableData>
+	</table>
+      </gain>
+    </pure_gain>
+
+    <fcs_function name="&U;/buses/ac-bus[0]">
+      <function>
+	<product>
+	  <max>
+	    <property>&U;/sources/output-ac</property>
+	    <property>&U;/sources/inverter-ac</property>
+	  </max>
+	  <table>
+	    <independentVar lookup="row">&U;/buses/ac-bus-damage</independentVar>
+	    <tableData>
+	      0.0  1.0
+	      0.85 1.0
+	      1.0  0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="&U;/buses/ac-bus[1]">
+      <function>
+	<product>
+	  <max>
+	    <property>&U;/sources/output-ac[1]</property>
+	    <property>&U;/sources/inverter-ac[1]</property>
+	  </max>
+	  <table>
+	    <independentVar lookup="row">&U;/buses/ac-bus-damage[1]</independentVar>
+	    <tableData>
+	      0.0  1.0
+	      0.85 1.0
+	      1.0  0.0
+	    </tableData>
+	  </table>
+	</product>
+      </function>
+    </fcs_function>
+    
+  </channel>
 </system>
+    
