@@ -56,6 +56,17 @@
 	</model>
 
 	<model>
+		<name>Mach</name>
+		<path>Aircraft/MiG-25/Models/Instruments/mach/mach.xml</path>
+		<offsets>
+			<x-m>-3.586</x-m>
+			<y-m>-0.301</y-m>
+			<z-m> 0.856</z-m>
+			<pitch-deg>-10.0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
 		<name>ASI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI2.xml</path>
 		<offsets>
@@ -84,6 +95,17 @@
 			<x-m>-3.618</x-m>
 			<y-m> 0.077</y-m>
 			<z-m> 0.828</z-m>
+			<pitch-deg>-10.0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Engine</name>
+		<path>Aircraft/MiG-25/Models/Instruments/engine/engine.xml</path>
+		<offsets>
+			<x-m>-3.590</x-m>
+			<y-m> 0.297</y-m>
+			<z-m> 0.873</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
