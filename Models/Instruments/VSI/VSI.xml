@@ -2,6 +2,18 @@
 <PropertyList>
     <path>VSI.ac</path>
 
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
     <animation>
         <type>material</type>
         <object-name>vspeedFace</object-name>
