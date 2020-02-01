@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
     <path>Cockpit.ac</path>
+	<model>
+		<name>Gunsight</name>
+		<path>Aircraft/MiG-25/Models/Instruments/gunsight/K10-T.ac</path>
+		<offsets>
+			<x-m>-3.42</x-m>
+			<y-m> 0.00 </y-m>
+			<z-m> 1.33</z-m>
+		</offsets>
+	</model>
 
 	<model>
 		<name>DME</name>
