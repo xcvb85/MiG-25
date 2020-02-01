@@ -50,16 +50,6 @@
     <object-name>FrontCanopy.001</object-name>
     <object-name>Fuselage</object-name>
     <object-name>GearBox</object-name>
-    <object-name>GearS1L</object-name>
-    <object-name>GearL</object-name>
-    <object-name>GearL_arm</object-name>
-    <object-name>BackWheelL</object-name>
-    <object-name>GearS1R</object-name>
-    <object-name>GearR</object-name>
-    <object-name>GearR_arm</object-name>
-    <object-name>BackWheelR</object-name>
-    <object-name>GearS2L</object-name>
-    <object-name>GearS2R</object-name>
     <object-name>HStabL</object-name>
     <object-name>HStabR</object-name>
     <object-name>Intake</object-name>
@@ -67,12 +57,6 @@
     <object-name>IntakeStrutR</object-name>
     <object-name>LEdgeL</object-name>
     <object-name>LEdgeR</object-name>
-    <object-name>NoseGear</object-name>
-    <object-name>NoseGearS1</object-name>
-    <object-name>NoseGearS2</object-name>
-    <object-name>NoseGearS3</object-name>
-    <object-name>NoseGearS4</object-name>
-    <object-name>NoseWheels</object-name>
     <object-name>NoseGearBox</object-name>
     <object-name>Nozzles</object-name>
     <object-name>Pitot</object-name>
