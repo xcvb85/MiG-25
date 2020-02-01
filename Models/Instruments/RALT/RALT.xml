@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff			 	  	#
+    #    	yurik@megasignal.com					   	#
+    #    	Jul 2007						   	#
+    #############################################################################	  
+    -->
+
+<!-- Radio altimeter
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>rv-5m.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+  <expression>
+    <table>
+      <product>
+          <sum>
+            <property>/position/altitude-agl-ft</property>
+            <value>-8</value>
+          </sum>
+        <value>0.3048</value>
+      </product>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	50.0</ind>	<dep>	75.0</dep></entry>
+      <entry><ind>	60.0</ind>	<dep>	91.5</dep></entry>
+      <entry><ind>	80.0</ind>	<dep>	123.0</dep></entry>
+      <entry><ind>	100.0</ind>	<dep>	155.0</dep></entry>
+      <entry><ind>	200.0</ind>	<dep>	179.0</dep></entry>
+      <entry><ind>	300.0</ind>	<dep>	203.0</dep></entry>
+      <entry><ind>	400.0</ind>	<dep>	226.0</dep></entry>
+      <entry><ind>	500.0</ind>	<dep>	251.0</dep></entry>
+      <entry><ind>	700.0</ind>	<dep>	300.0</dep></entry>
+      <entry><ind>	800.0</ind>	<dep>	325.0</dep></entry>
+    </table>
+  </expression>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+</PropertyList>
