@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>ALT.ac</path>
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>altimeterNeedle100</object-name>
+        <object-name>altimeterNeedle1k</object-name>
+        <object-name>altimeterFace</object-name>
+        <object-name>pressureGuage</object-name>
+        <emission>
+            <red>0.6</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission> 
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>altimeterNeedle100</object-name>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>-0.1097279</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>  
+
+    <animation>
+        <type>rotate</type>
+        <object-name>altimeterNeedle1k</object-name>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>-0.00350199</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>pressureGuage</object-name>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <interpolation>
+            <entry>
+                <ind> 940.0</ind>
+                <dep>   0.0</dep>
+            </entry>
+            <entry>
+                <ind>1050.0</ind>
+                <dep>-330.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>altimeterKnob</object-name>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <interpolation>
+            <entry>
+                <ind> 940.0</ind>
+                <dep>   0.0</dep>
+            </entry>
+            <entry>
+                <ind>1050.0</ind>
+                <dep>-330.0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 0.000</x-m>
+            <y-m>-0.037</y-m>
+            <z-m>-0.038</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>altimeterKnob</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/altimeter/setting-hpa</property>
+                <step>0.25</step>
+                <min>940</min>
+                <max>1051</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/altimeter/setting-hpa</property>
+                <step>-0.25</step>
+                <min>940</min>
+                <max>1051</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/altimeter/setting-hpa</property>
+                <step>1.0</step>
+                <min>940</min>
+                <max>1051</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/altimeter/setting-hpa</property>
+                <step>-1.0</step>
+                <min>940</min>
+                <max>1051</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+    
+<!-- Label text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Altimeter (meters)</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>
