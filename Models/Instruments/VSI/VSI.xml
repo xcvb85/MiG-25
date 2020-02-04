@@ -39,9 +39,9 @@
             <entry><ind>656.168</ind><dep>136.0</dep></entry>
         </interpolation>
         <center>
-            <x-m>-0.0060</x-m>
-            <y-m> 0.0024</y-m>
-            <z-m> 0.0055</z-m>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.0</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -60,9 +60,9 @@
             <entry><ind>-45.0</ind><dep>-30.0</dep></entry>
         </interpolation>
         <center>
-            <x-m>-0.00764</x-m>
-            <y-m> 0.00224</y-m>
-            <z-m>-0.0190</z-m>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.0</z-m>
         </center>
         <axis>
             <x>-1.0</x>

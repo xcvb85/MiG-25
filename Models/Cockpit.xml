@@ -10,7 +10,7 @@
 			<z-m> 1.33</z-m>
 		</offsets>
 	</model>
-
+<!--
 	<model>
 		<name>DME</name>
 		<path>Aircraft/MiG-25/Models/Instruments/DME/DME.xml</path>
@@ -20,7 +20,7 @@
 			<z-m> 1.11</z-m>
 		</offsets>
 	</model>
-
+-->
 	<model>
 		<name>ASI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI.xml</path>
@@ -55,9 +55,9 @@
 		<name>Mach</name>
 		<path>Aircraft/MiG-25/Models/Instruments/mach/mach.xml</path>
 		<offsets>
-			<x-m>-3.578</x-m>
-			<y-m>-0.301</y-m>
-			<z-m> 0.856</z-m>
+			<x-m>-3.574</x-m>
+			<y-m>-0.254</y-m>
+			<z-m> 0.888</z-m>
 		</offsets>
 	</model>
 
@@ -65,9 +65,9 @@
 		<name>ALT</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ALT/ALT.xml</path>
 		<offsets>
-			<x-m>-3.576</x-m>
-			<y-m>-0.192</y-m>
-			<z-m> 0.880</z-m>
+			<x-m>-3.574</x-m>
+			<y-m>-0.162</y-m>
+			<z-m> 0.910</z-m>
 		</offsets>
 	</model>
 
@@ -75,9 +75,9 @@
 		<name>HSI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/HSI/hsi.xml</path>
 		<offsets>
-			<x-m>-3.573</x-m>
-			<y-m>-0.073</y-m>
-			<z-m> 0.863</z-m>
+			<x-m>-3.575</x-m>
+			<y-m>-0.060</y-m>
+			<z-m> 0.897</z-m>
 		</offsets>
 	</model>
 
@@ -86,11 +86,11 @@
 		<path>Aircraft/MiG-25/Models/Instruments/Radar/Radar.xml</path>
 		<offsets>
 			<x-m>-3.618</x-m>
-			<y-m> 0.077</y-m>
-			<z-m> 0.828</z-m>
+			<y-m> 0.078</y-m>
+			<z-m> 0.887</z-m>
 		</offsets>
 	</model>
-
+<!--
 	<model>
 		<name>Engine</name>
 		<path>Aircraft/MiG-25/Models/Instruments/engine/engine.xml</path>
@@ -110,14 +110,14 @@
 			<z-m> 0.762</z-m>
 		</offsets>
 	</model>
-
+-->
 	<model>
 		<name>Clock</name>
 		<path>Aircraft/MiG-25/Models/Instruments/clock/clock.xml</path>
 		<offsets>
-			<x-m>-3.578</x-m>
-			<y-m>-0.188</y-m>
-			<z-m> 0.785</z-m>
+			<x-m>-3.575</x-m>
+			<y-m>-0.162</y-m>
+			<z-m> 0.809</z-m>
 		</offsets>
 	</model>
 </PropertyList>
