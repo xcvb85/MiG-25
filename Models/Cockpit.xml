@@ -25,9 +25,9 @@
 		<name>ASI</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI.xml</path>
 		<offsets>
-			<x-m>-3.588</x-m>
-			<y-m>-0.190</y-m>
-			<z-m> 0.987</z-m>
+			<x-m>-3.558</x-m>
+			<y-m>-0.158</y-m>
+			<z-m> 1.002</z-m>
 		</offsets>
 	</model>
 
@@ -90,14 +90,14 @@
 			<z-m> 0.887</z-m>
 		</offsets>
 	</model>
-<!--
+
 	<model>
-		<name>Engine</name>
-		<path>Aircraft/MiG-25/Models/Instruments/engine/engine.xml</path>
+		<name>RPM</name>
+		<path>Aircraft/MiG-25/Models/Instruments/RPM/RPM.xml</path>
 		<offsets>
-			<x-m>-3.578</x-m>
-			<y-m> 0.297</y-m>
-			<z-m> 0.873</z-m>
+			<x-m>-3.575</x-m>
+			<y-m> 0.251</y-m>
+			<z-m> 0.904</z-m>
 		</offsets>
 	</model>
 
@@ -105,12 +105,12 @@
 		<name>RALT</name>
 		<path>Aircraft/MiG-25/Models/Instruments/RALT/RALT.xml</path>
 		<offsets>
-			<x-m>-3.578</x-m>
-			<y-m>-0.301</y-m>
-			<z-m> 0.762</z-m>
+			<x-m>-3.575</x-m>
+			<y-m>-0.254</y-m>
+			<z-m> 0.809</z-m>
 		</offsets>
 	</model>
--->
+
 	<model>
 		<name>Clock</name>
 		<path>Aircraft/MiG-25/Models/Instruments/clock/clock.xml</path>
@@ -118,6 +118,16 @@
 			<x-m>-3.575</x-m>
 			<y-m>-0.162</y-m>
 			<z-m> 0.809</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>EGT</name>
+		<path>Aircraft/MiG-25/Models/Instruments/EGT/EGT.xml</path>
+		<offsets>
+			<x-m>-3.575</x-m>
+			<y-m> 0.249</y-m>
+			<z-m> 0.826</z-m>
 		</offsets>
 	</model>
 </PropertyList>

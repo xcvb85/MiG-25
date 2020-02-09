@@ -10,27 +10,23 @@
 3D instrument for Tu-154 -->
 <PropertyList>
  <path>ut.ac</path>
-<!-- Internal instruments lighting -->
-<animation>
-  <type>material</type>
-  <object-name>base</object-name>
-  <object-name>needle_1</object-name>
-  <object-name>needle_2</object-name>
-  <object-name>needle_3</object-name>
-  <object-name>needle_4</object-name>
-  <emission>
-    <red-prop>tu154/light/instruments/int-red</red-prop>
-    <green-prop>tu154/light/instruments/int-green</green-prop>
-    <blue-prop>tu154/light/instruments/int-blue</blue-prop>
-  </emission>
-</animation>
-
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
   
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
 <!--Needles-->
 <animation>
     <type>rotate</type>
     <object-name>needle_1</object-name>
-    <property>fdm/jsbsim/propulsion/engine[0]/egt-filtered</property>
+    <property>engines/engine[0]/egt-degf</property>
 <!--Farenheit-->
 <!--    <interpolation>
       <entry><ind>	0.0</ind>	<dep>	-134.0</dep></entry>
@@ -45,8 +41,8 @@
     </interpolation>
   <center>
     <x-m>0.0</x-m>
-    <y-m>-0.017</y-m>
-    <z-m>0.002</z-m>
+    <y-m>-0.015</y-m>
+    <z-m>0.003</z-m>
   </center>
     <axis>
       <x>-1.0</x>
@@ -57,13 +53,13 @@
 <animation>
   <type>rotate</type>
   <object-name>needle_2</object-name>
-  <property>fdm/jsbsim/propulsion/engine[0]/egt-filtered</property>
+  <property>engines/engine[0]/egt-degf</property>
   <factor>3.6</factor>
   <offset-deg>180.0</offset-deg>
   <center>
     <x-m>0.0</x-m>
-    <y-m>-0.017</y-m>
-    <z-m>-0.01</z-m>
+    <y-m>-0.015</y-m>
+    <z-m>-0.009</z-m>
   </center>
   <axis>
     <x>-1.0</x>
@@ -72,5 +68,48 @@
   </axis>
 </animation>
 
-
+<animation>
+    <type>rotate</type>
+    <object-name>needle_3</object-name>
+    <property>engines/engine[1]/egt-degf</property>
+<!--Farenheit-->
+<!--    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-134.0</dep></entry>
+      <entry><ind>	1110.7</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	2190.6</ind>	<dep>	134.0</dep></entry>
+    </interpolation>-->
+<!--Celsius-->
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-134.0</dep></entry>
+      <entry><ind>	600.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	1200.0</ind>	<dep>	134.0</dep></entry>
+    </interpolation>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.015</y-m>
+    <z-m>0.003</z-m>
+  </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>needle_4</object-name>
+  <property>engines/engine[1]/egt-degf</property>
+  <factor>3.6</factor>
+  <offset-deg>180.0</offset-deg>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.015</y-m>
+    <z-m>-0.009</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 </PropertyList>
