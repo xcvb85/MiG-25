@@ -140,5 +140,15 @@
 			<z-m> 0.826</z-m>
 		</offsets>
 	</model>
+
+	<model>
+		<name>Cabin Altitude</name>
+		<path>Aircraft/MiG-25/Models/Instruments/CALT/CALT.xml</path>
+		<offsets>
+			<x-m>-3.575</x-m>
+			<y-m>-0.048</y-m>
+			<z-m> 0.696</z-m>
+		</offsets>
+	</model>
 </PropertyList>
 
