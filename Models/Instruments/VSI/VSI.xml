@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
-    <path>VSI.ac</path>
+    <path>DA-200.ac</path>
 
   <animation>
     <type>noshadow</type>
@@ -55,14 +55,14 @@
         <object-name>turnneedle</object-name>
         <property>orientation/roll-deg</property>
         <interpolation>
-            <entry><ind>45.0</ind><dep>30.0</dep></entry>
+            <entry><ind>45.0</ind><dep>25.0</dep></entry>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>-45.0</ind><dep>-30.0</dep></entry>
+            <entry><ind>-45.0</ind><dep>-25.0</dep></entry>
         </interpolation>
         <center>
             <x-m> 0.0</x-m>
             <y-m> 0.0</y-m>
-            <z-m> 0.0</z-m>
+            <z-m>-0.028</z-m>
         </center>
         <axis>
             <x>-1.0</x>

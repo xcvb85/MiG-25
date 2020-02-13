@@ -94,9 +94,9 @@
         <property>orientation/roll-deg</property>
         <factor>-1</factor>
         <center>
-            <x-m>-0.001838</x-m>
-            <y-m>-0.00139</y-m>
-            <z-m>0.005023</z-m>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
         </center>
         <axis>
             <x>1</x>

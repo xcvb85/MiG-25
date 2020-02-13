@@ -1,9 +1,18 @@
 <?xml version="1.0"?>
-
 <!-- Cabin altitude indicator -->
-
 <PropertyList>
  <path>uvpd-15.ac</path>
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
 
  <animation>
    <type>material</type>
