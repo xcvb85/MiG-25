@@ -12,7 +12,7 @@
 	</model>
 <!--
 	<model>
-		<name>DME</name>
+		<name>DME - Tu-154b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/DME/DME.xml</path>
 		<offsets>
 			<x-m>-3.62</x-m>
@@ -22,17 +22,7 @@
 	</model>
 -->
 	<model>
-		<name>GMeter</name>
-		<path>Aircraft/MiG-25/Models/Instruments/GMeter/GMeter.xml</path>
-		<offsets>
-			<x-m>-3.559</x-m>
-			<y-m> 0.190</y-m>
-			<z-m> 1.029</z-m>
-		</offsets>
-	</model>
-
-	<model>
-		<name>ASI</name>
+		<name>ASI - Tu-154b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ASI/ASI.xml</path>
 		<offsets>
 			<x-m>-3.558</x-m>
@@ -42,7 +32,7 @@
 	</model>
 
 	<model>
-		<name>AI</name>
+		<name>AI - MiG-21 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/AI/AI.xml</path>
 		<offsets>
 			<x-m>-3.56</x-m>
@@ -52,7 +42,17 @@
 	</model>
 
 	<model>
-		<name>VSI</name>
+		<name>GMeter - MiG-21 (GPLv3)</name>
+		<path>Aircraft/MiG-25/Models/Instruments/GMeter/GMeter.xml</path>
+		<offsets>
+			<x-m>-3.559</x-m>
+			<y-m> 0.190</y-m>
+			<z-m> 1.029</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>VSI - Su-25 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/VSI/VSI.xml</path>
 		<offsets>
 			<x-m>-3.57</x-m>
@@ -62,7 +62,7 @@
 	</model>
 
 	<model>
-		<name>Mach</name>
+		<name>Mach - MiG-21 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/mach/mach.xml</path>
 		<offsets>
 			<x-m>-3.574</x-m>
@@ -72,7 +72,7 @@
 	</model>
 
 	<model>
-		<name>ALT</name>
+		<name>ALT - MiG-21 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/ALT/ALT.xml</path>
 		<offsets>
 			<x-m>-3.574</x-m>
@@ -82,7 +82,7 @@
 	</model>
 
 	<model>
-		<name>HSI</name>
+		<name>HSI - MiG-21 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/HSI/hsi.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
@@ -92,7 +92,7 @@
 	</model>
 
 	<model>
-		<name>Radar</name>
+		<name>Radar - MiG-21 (GPLv3)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/Radar/Radar.xml</path>
 		<offsets>
 			<x-m>-3.618</x-m>
@@ -102,7 +102,7 @@
 	</model>
 
 	<model>
-		<name>RPM</name>
+		<name>RPM - Tu-154b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/RPM/RPM.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
@@ -122,17 +122,17 @@
 	</model>
 
 	<model>
-		<name>Chronometer</name>
+		<name>Chronometer - An-24b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/Chronometer/Chronometer.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
-			<y-m>-0.162</y-m>
-			<z-m> 0.809</z-m>
+			<y-m>-0.158</y-m>
+			<z-m> 0.825</z-m>
 		</offsets>
 	</model>
 
 	<model>
-		<name>EGT</name>
+		<name>EGT - Tu-154b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/EGT/EGT.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
@@ -142,12 +142,22 @@
 	</model>
 
 	<model>
-		<name>Cabin Altitude</name>
+		<name>Cabin Altitude - An-24b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/CALT/CALT.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m>-0.048</y-m>
 			<z-m> 0.696</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Fuel</name>
+		<path>Aircraft/MiG-25/Models/Instruments/Fuel/Fuel.xml</path>
+		<offsets>
+			<x-m>-3.575</x-m>
+			<y-m> 0.250</y-m>
+			<z-m> 0.747</z-m>
 		</offsets>
 	</model>
 </PropertyList>

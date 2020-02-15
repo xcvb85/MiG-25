@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>Fuel.ac</path>
+  <animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/MiG-25/Models/Effects/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>needle</object-name>
+        <property>consumables/fuel/total-fuel-kg</property>
+        <factor>0.017</factor>
+	<offset-deg>-155</offset-deg>
+        <center>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+</PropertyList>
