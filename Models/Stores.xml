@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+   <!-- Stores -->
+   <!-- Left side -->
+   <!-- R-40T -->
+   <model>
+      <name>R-40T Missile Left</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40T/R-40T.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m>-4.511</y-m>
+         <z-m>-0.100</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40T Missile Left</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[0]</property>
+            <value>40</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-40T Missile Left Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40T/R-40T.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m>-3.309</y-m>
+         <z-m> 0.025</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40T Missile Left Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[1]</property>
+            <value>40</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-40R -->
+   <model>
+      <name>R-40R Missile Left</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40R/R-40R.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m>-4.511</y-m>
+         <z-m>-0.100</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40R Missile Left</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[0]</property>
+            <value>41</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-40R Missile Left Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40R/R-40R.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m>-3.309</y-m>
+         <z-m> 0.025</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40R Missile Left Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[1]</property>
+            <value>41</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-60 -->
+   <model>
+      <name>R-60 Missile Left</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-60M/R-60M.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m>-4.511</y-m>
+         <z-m> 0.000</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-60 Missile Left</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[0]</property>
+            <value>60</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-60 Missile Left Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-60M/R-60M.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m>-3.309</y-m>
+         <z-m> 0.125</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-60 Missile Left Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[1]</property>
+            <value>60</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-73 -->
+   <model>
+      <name>R-73 Missile Left</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-73/R-73.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m>-4.511</y-m>
+         <z-m> 0.000</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-73 Missile Left</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[0]</property>
+            <value>73</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-73 Missile Left Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-73/R-73.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m>-3.309</y-m>
+         <z-m> 0.125</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-73 Missile Left Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[1]</property>
+            <value>73</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- Right side -->
+   <!-- R-40T -->
+   <model>
+      <name>R-40T Missile Right</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40T/R-40T.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m> 4.511</y-m>
+         <z-m>-0.100</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40T Missile Right</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[3]</property>
+            <value>40</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-40T Missile Right Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40T/R-40T.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m> 3.309</y-m>
+         <z-m> 0.025</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40T Missile Right Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[2]</property>
+            <value>40</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-40R -->
+   <model>
+      <name>R-40R Missile Right</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40R/R-40R.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m> 4.511</y-m>
+         <z-m>-0.100</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40R Missile Right</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[3]</property>
+            <value>41</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-40R Missile Right Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-40R/R-40R.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m> 3.309</y-m>
+         <z-m> 0.025</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-40R Missile Right Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[2]</property>
+            <value>41</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-60 -->
+   <model>
+      <name>R-60 Missile Right</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-60M/R-60M.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m> 4.511</y-m>
+         <z-m> 0.000</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-60 Missile Right</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[3]</property>
+            <value>60</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-60 Missile Right Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-60M/R-60M.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m> 3.309</y-m>
+         <z-m> 0.125</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-60 Missile Right Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[2]</property>
+            <value>60</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <!-- R-73 -->
+   <model>
+      <name>R-73 Missile Right</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-73/R-73.xml</path>
+      <offsets>
+         <x-m> 4.510</x-m>
+         <y-m> 4.511</y-m>
+         <z-m> 0.000</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-73 Missile Right</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[3]</property>
+            <value>73</value>
+         </equals>
+      </condition>
+   </animation>
+
+   <model>
+      <name>R-73 Missile Right Inner</name>
+      <path>Aircraft/MiG-25/Models/Stores/R-73/R-73.xml</path>
+      <offsets>
+         <x-m> 3.575</x-m>
+         <y-m> 3.309</y-m>
+         <z-m> 0.125</z-m>
+      </offsets>
+   </model>
+   <animation>
+      <object-name>R-73 Missile Right Inner</object-name>
+      <type>select</type>
+      <condition>
+         <equals>
+            <property>sim/multiplay/generic/short[2]</property>
+            <value>73</value>
+         </equals>
+      </condition>
+   </animation>
+</PropertyList>
+

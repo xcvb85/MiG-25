@@ -13,6 +13,12 @@
     <path>Aircraft/MiG-25/Models/Cockpit.xml</path>
   </model>
 
+  <!-- Stores -->
+  <model>
+    <name>Stores</name>
+    <path>Aircraft/MiG-25/Models/Stores.xml</path>
+  </model>
+
   <!-- fuselage reflection -->
   <effect>
     <inherits-from>Aircraft/MiG-25/Models/Effects/fuselage/mig-fuselage</inherits-from>
