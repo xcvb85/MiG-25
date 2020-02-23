@@ -110,7 +110,6 @@
     </function>
     <function name="aero/coefficients/Cds">
        <description>Drag due to sideslip</description>
-       <product>
           <table>
             <independentVar lookup="row">aero/beta-rad</independentVar>
             <tableData>
@@ -121,7 +120,6 @@
                1.57   1.23
             </tableData>
           </table>
-       </product>
     </function>
     <function name="aero/coefficients/Cde">
        <description>Drag due to Elevator Deflection</description>
@@ -319,9 +317,7 @@
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <sum>
                         <property>aero/coefficients/Csb</property>
-                    </sum>
                 </product>
             </function>
         </axis>

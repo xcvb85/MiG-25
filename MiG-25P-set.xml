@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
    <sim include="Systems/views.xml">
-      <description>Mikoyan-Gurevich MiG-25</description>
+      <description>Mikoyan-Gurevich MiG-25P</description>
       <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck</author>
-      <long-description>The MiG-25 Foxbat is a record-breaking supersonic interceptor/reconnaissance aircraft. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
+      <long-description>The MiG-25P Foxbat is a record-breaking supersonic interceptor. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
       <flight-model>jsb</flight-model>
       <aero>MiG-25</aero>
       <flaps>

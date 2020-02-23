@@ -3,7 +3,7 @@
     <path>Cockpit.ac</path>
 	<model>
 		<name>Gunsight</name>
-		<path>Aircraft/MiG-25/Models/Instruments/gunsight/K10-T.ac</path>
+		<path>Aircraft/MiG-25/Models/Instruments/Gunsight/Gunsight.xml</path>
 		<offsets>
 			<x-m>-3.42</x-m>
 			<y-m> 0.00</y-m>
@@ -27,7 +27,7 @@
 		<offsets>
 			<x-m>-3.558</x-m>
 			<y-m>-0.158</y-m>
-			<z-m> 1.002</z-m>
+			<z-m> 1.052</z-m>
 		</offsets>
 	</model>
 
@@ -37,7 +37,7 @@
 		<offsets>
 			<x-m>-3.56</x-m>
 			<y-m>-0.05</y-m>
-			<z-m> 1.03</z-m>
+			<z-m> 1.08</z-m>
 		</offsets>
 	</model>
 
@@ -47,7 +47,7 @@
 		<offsets>
 			<x-m>-3.559</x-m>
 			<y-m> 0.190</y-m>
-			<z-m> 1.029</z-m>
+			<z-m> 1.079</z-m>
 		</offsets>
 	</model>
 
@@ -57,7 +57,7 @@
 		<offsets>
 			<x-m>-3.57</x-m>
 			<y-m> 0.07</y-m>
-			<z-m> 1.02</z-m>
+			<z-m> 1.07</z-m>
 		</offsets>
 	</model>
 
@@ -67,7 +67,7 @@
 		<offsets>
 			<x-m>-3.574</x-m>
 			<y-m>-0.254</y-m>
-			<z-m> 0.888</z-m>
+			<z-m> 0.938</z-m>
 		</offsets>
 	</model>
 
@@ -77,7 +77,7 @@
 		<offsets>
 			<x-m>-3.574</x-m>
 			<y-m>-0.162</y-m>
-			<z-m> 0.910</z-m>
+			<z-m> 0.960</z-m>
 		</offsets>
 	</model>
 
@@ -87,7 +87,7 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m>-0.060</y-m>
-			<z-m> 0.897</z-m>
+			<z-m> 0.947</z-m>
 		</offsets>
 	</model>
 
@@ -97,7 +97,7 @@
 		<offsets>
 			<x-m>-3.618</x-m>
 			<y-m> 0.078</y-m>
-			<z-m> 0.887</z-m>
+			<z-m> 0.937</z-m>
 		</offsets>
 	</model>
 
@@ -107,7 +107,7 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m> 0.251</y-m>
-			<z-m> 0.904</z-m>
+			<z-m> 0.954</z-m>
 		</offsets>
 	</model>
 
@@ -117,7 +117,7 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m>-0.254</y-m>
-			<z-m> 0.809</z-m>
+			<z-m> 0.859</z-m>
 		</offsets>
 	</model>
 
@@ -127,7 +127,7 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m>-0.158</y-m>
-			<z-m> 0.825</z-m>
+			<z-m> 0.880</z-m>
 		</offsets>
 	</model>
 
@@ -137,17 +137,27 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m> 0.249</y-m>
-			<z-m> 0.826</z-m>
+			<z-m> 0.876</z-m>
 		</offsets>
 	</model>
-
+<!--
+	<model>
+		<name>AP</name>
+		<path>Aircraft/MiG-25/Models/Instruments/AP/ap.ac</path>
+		<offsets>
+			<x-m>-3.575</x-m>
+			<y-m>-0.143</y-m>
+			<z-m> 0.801</z-m>
+		</offsets>
+	</model>
+-->
 	<model>
 		<name>Cabin Altitude - An-24b (GPLv2+)</name>
 		<path>Aircraft/MiG-25/Models/Instruments/CALT/CALT.xml</path>
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m>-0.048</y-m>
-			<z-m> 0.696</z-m>
+			<z-m> 0.746</z-m>
 		</offsets>
 	</model>
 
@@ -157,7 +167,27 @@
 		<offsets>
 			<x-m>-3.575</x-m>
 			<y-m> 0.250</y-m>
-			<z-m> 0.747</z-m>
+			<z-m> 0.797</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Warnings</name>
+		<path>Aircraft/MiG-25/Models/Instruments/Warnings/Warnings.ac</path>
+		<offsets>
+			<x-m>-3.576</x-m>
+			<y-m> 0.115</y-m>
+			<z-m> 0.798</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Warnings</name>
+		<path>Aircraft/MiG-25/Models/Instruments/Warnings/Warnings.ac</path>
+		<offsets>
+			<x-m>-3.576</x-m>
+			<y-m> 0.175</y-m>
+			<z-m> 0.798</z-m>
 		</offsets>
 	</model>
 
@@ -174,7 +204,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -194,7 +224,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -214,7 +244,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -234,7 +264,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -254,7 +284,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -274,7 +304,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -294,7 +324,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -314,7 +344,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -334,7 +364,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -354,7 +384,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
@@ -374,7 +404,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -394,7 +424,7 @@
   <center>
    <x-m>-3.419</x-m>
    <y-m> 0.000</y-m>
-   <z-m> 0.599</z-m>
+   <z-m> 0.639</z-m>
   </center>
   <axis>
    <x>-1</x>
