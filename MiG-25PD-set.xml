@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+   <sim include="Systems/views.xml">
+      <description>Mikoyan-Gurevich MiG-25PD</description>
+      <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck</author>
+      <long-description>The MiG-25PD Foxbat is a record-breaking supersonic interceptor. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
+      <flight-model>jsb</flight-model>
+      <aero>MiG-25</aero>
+      <flaps>
+         <setting>0.0</setting>
+         <setting>1.0</setting>
+      </flaps>
+      <model>
+         <path>Aircraft/MiG-25/Models/MiG-25.xml</path>
+      </model>
+      <sound>
+         <path>Aircraft/MiG-25/Sounds/Sound.xml</path>
+      </sound>
+      <multiplay>
+         <generic>
+            <!--payloads-->
+            <short n="0" alias="/payload/weight[0]/id" />
+            <short n="1" alias="/payload/weight[1]/id" />
+            <short n="2" alias="/payload/weight[2]/id" />
+            <short n="3" alias="/payload/weight[3]/id" />
+            <short n="4" alias="/payload/weight[4]/id" />
+            <float n="1" type="double" alias="/engines/engine[0]/nozzle-pos-norm" />
+            <bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
+            <float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm" />
+            <bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
+         </generic>
+      </multiplay>
+   </sim>
+   <engines>
+      <engine n="0">
+         <running>true</running>
+         <reverser-pos-norm type="double">0</reverser-pos-norm>
+      </engine>
+      <engine n="1">
+         <running>true</running>
+         <reverser-pos-norm type="double">0</reverser-pos-norm>
+      </engine>
+   </engines>
+   <fdm>
+      <jsbsim>
+         <systems>
+            <brakes>
+               <brake-left-cmd type="float" alias="/controls/gear/brake-left" />
+               <brake-right-cmd type="float" alias="/controls/gear/brake-right" />
+               <brake-parking type="bool" alias="/controls/gear/brake-parking" />
+            </brakes>
+         </systems>
+      </jsbsim>
+   </fdm>
+   <payload>
+      <weight n="0">
+         <name>Center Station</name>
+         <selected>none</selected>
+         <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+         <opt>
+            <name>none</name>
+            <lbs>0</lbs>
+            <weight-lb>0</weight-lb>
+         </opt>
+         <opt>
+            <name>Droptank</name>
+            <lbs>271.0</lbs>
+            <gals>600</gals>
+         </opt>
+      </weight>
+      <weight n="1">
+         <name>Left wing outboard pylon (#1)</name>
+         <selected>none</selected>
+         <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+         <opt>
+            <name>none</name>
+            <lbs>0</lbs>
+            <weight-lb>0</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40T</name>
+            <lbs>1032</lbs>
+            <weight-lb>1032</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40R</name>
+            <lbs>1047</lbs>
+            <weight-lb>1047</weight-lb>
+         </opt>
+         <opt>
+            <name>R-60</name>
+            <lbs>96</lbs>
+            <weight-lb>96</weight-lb>
+         </opt>
+      </weight>
+      <weight n="2">
+         <name>Left wing inboard pylon (#2)</name>
+         <selected>none</selected>
+         <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+         <opt>
+            <name>none</name>
+            <lbs>0</lbs>
+            <weight-lb>0</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40T</name>
+            <lbs>1032</lbs>
+            <weight-lb>1032</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40R</name>
+            <lbs>1047</lbs>
+            <weight-lb>1047</weight-lb>
+         </opt>
+      </weight>
+      <weight n="3">
+         <name>Right wing inboard pylon (#3)</name>
+         <selected>none</selected>
+         <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+         <opt>
+            <name>none</name>
+            <lbs>0</lbs>
+            <weight-lb>0</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40T</name>
+            <lbs>1032</lbs>
+            <weight-lb>1032</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40R</name>
+            <lbs>1047</lbs>
+            <weight-lb>1047</weight-lb>
+         </opt>
+      </weight>
+      <weight n="4">
+         <name>Right wing outboard pylon (#4)</name>
+         <selected>none</selected>
+         <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+         <opt>
+            <name>none</name>
+            <lbs>0</lbs>
+            <weight-lb>0</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40T</name>
+            <lbs>1032</lbs>
+            <weight-lb>1032</weight-lb>
+         </opt>
+         <opt>
+            <name>R-40R</name>
+            <lbs>1047</lbs>
+            <weight-lb>1047</weight-lb>
+         </opt>
+         <opt>
+            <name>R-60</name>
+            <lbs>96</lbs>
+            <weight-lb>96</weight-lb>
+         </opt>
+      </weight>
+   </payload>
+</PropertyList>
+
