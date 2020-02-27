@@ -748,7 +748,6 @@ var FireControl = {
 	},
 
 	  triggerHold: func (aimer) {
-	      print("\o/");
 		# will fire weapon even with no lock
 		if (me.triggerTime == 0 or me.getSelectedWeapon() == nil or me.getSelectedWeapon().parents[0] != armament.AIM or me.triggerTime + 1.5 > getprop("sim/time/elapsed-sec")) {
 			return;
@@ -1025,7 +1024,7 @@ var FireControl = {
 	},
 };
 
-var debug = 1;
+var debug = 0;
 var printDebug = func (msg) {if (debug == 1) print(msg);};
 var printfDebug = func {if (debug == 1) call(printf,arg);};
 
@@ -1035,6 +1034,5 @@ var printfDebug = func {if (debug == 1) call(printf,arg);};
 var dualWeapons = ["MK-83"];
 var getCompleteRadarTargetsList = func {
 	# A list of all MP/AI aircraft/ships/surface-targets around the aircraft.
-    # return awg_9.completeList;
-    return []
+    return radar.completeList;
 }
