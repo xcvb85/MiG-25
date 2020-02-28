@@ -381,4 +381,27 @@
       </equals>
     </condition>
   </animation>
+
+  <!-- Central Station -->
+  <!-- Droptank -->
+  <model>
+    <name>Droptank</name>
+    <path>Aircraft/MiG-25/Models/Stores/Droptank/Droptank.ac</path>
+  </model>
+  <animation>
+    <object-name>Droptank</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+        <equals>
+          <property>payload/armament/station/id-4-type</property>
+          <value>Droptank</value>
+        </equals>
+	<equals>
+	  <property>payload/armament/station/id-4-count</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
 </PropertyList>
