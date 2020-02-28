@@ -286,7 +286,7 @@
       </r-40td>
 
       <station-name>station</station-name>
-      <models>Aircraft/MiG-25/Models/Stores</models>
+      <models>Aircraft/MiG-25/Models/Stores/</models>
       <modelsUseCase>false</modelsUseCase>
       <msg type="bool">true</msg>
       <enable-craters type="bool">true</enable-craters>
