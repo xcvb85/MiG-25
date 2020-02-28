@@ -162,29 +162,12 @@ var Target = {
         obj.RangeLast       = 0; 
         obj.ClosureRate     = 0;
         obj.Display_Node    = nil;
-        
         obj.ispainted       = 0;
-        
-        #obj.TimeLast.setValue(ElapsedSec.getValue());
-        
         obj.RadarStandby    = c.getNode("sim/multiplay/generic/int[2]");
-        
         obj.deviation       = nil;
-
-        
-
-#         if (obj.get_Callsign() == "GROUND_TARGET") {
-#             obj.type = armament.SURFACE;
-#         }
-# 
-#         if(obj.type  == "missile"){
-#           obj.type  = armament.ORDNANCE;
-#         }
-        
         obj.type = armament.AIR;
-        
         obj.model = "";
-        
+        obj.TgTCoord = 0;
         return obj;
     },
     
@@ -358,30 +341,24 @@ var Target = {
     },
 
     get_Validity: func(){
-        var n = 0;
-        if(getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time") != nil)
-        {
-            n = 1;
-        }
-        return n;
+        return (getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time") != nil)
     },
 
     get_TimeLast: func(){
-        var n = 0;
         if(getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time") != nil )
         {
             #print(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time");
             #print(getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time"));
-            n = getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time");
+            return getprop(me.InstrString ~ "/" ~ me.shortstring ~ "/closure-last-time");
         }
-        return n;
+        return 0;
     },
 
     get_Coord: func(){
-        TgTCoord  = geo.Coord.new();
-        TgTCoord.set_latlon(me.lat.getValue(), me.lon.getValue(), me.Alt.getValue() * FT2M);
+        me.TgTCoord  = geo.Coord.new();
+        me.TgTCoord.set_latlon(me.lat.getValue(), me.lon.getValue(), me.Alt.getValue() * FT2M);
         me.set_latlon(me.lat.getValue(), me.lon.getValue(), me.Alt.getValue() * FT2M);
-        return TgTCoord;
+        return me.TgTCoord;
     },
 
     get_Callsign: func(){
@@ -403,49 +380,33 @@ var Target = {
     },
 
     get_Speed: func(){
-        var n = me.Speed.getValue();
+        return me.Speed.getValue();
         #var alt = me.Alt.getValue();
         #n = n / (0.632 ^ (-(alt / 25066))); # Calcul of Air Speed based on ground speed. the function ^ doesn't work !!
-        return n;
     },
 
     get_Longitude: func(){
-        var n = me.lon.getValue();
-        return n;
+        return me.lon.getValue();
     },
 
     get_Latitude: func(){
-        var n = me.lat.getValue();
-        return n;
+        return me.lat.getValue();
     },
 
     get_Pitch: func(){
-        var n = me.pitch.getValue();
-        return n;
+        return me.pitch.getValue();
     },
 
     get_Roll: func(){
-        var n = me.roll.getValue();
-        return n;
+        return me.roll.getValue();
     },
 
     get_heading : func(){
-        var n = me.Heading.getValue();
-        if(n == nil)
-        {
-            n = 0;
-        }
-        return n;
+        return me.Heading.getValue() or 0;
     },
 
     get_bearing: func(){
-        var n = 0;
-        n = me.Bearing.getValue();
-        if(n == nil)
-        {
-            n = 0;
-        }
-        return n;
+        return me.Bearing.getValue() or 0;
     },
 
     get_bearing_from_Coord: func(MyAircraftCoord){
@@ -483,7 +444,6 @@ var Target = {
         return me.objectElevationDeg;
     },
     get_Elevation_from_Coord_HUD:func(){
-        var myCoord = me.get_Coord();
         return vector.Math.getPitch(geo.viewer_position(), me.get_Coord()); 
     },
 
@@ -494,8 +454,7 @@ var Target = {
     },
     
     get_total_elevation: func(own_pitch){
-        me.myTotalElevation =  - deviation_normdeg(own_pitch, me.Elevation.getValue());
-        return me.myTotalElevation;
+        return -deviation_normdeg(own_pitch, me.Elevation.getValue());
     },
 
     get_range: func(){
@@ -610,12 +569,7 @@ var Target = {
     },
 
     get_fading: func(){
-        var fading = me.Fading.getValue();
-        if(fading == nil)
-        {
-            fading = 0;
-        }
-        return fading;
+        return me.Fading.getValue() or 0;
     },
 
     set_fading: func(n,writeTree = nil){
@@ -823,8 +777,9 @@ var Target = {
 };
 
 # Utilities.
+var dev_norm = 0;
 var deviation_normdeg = func(our_heading, target_bearing){
-    var dev_norm = our_heading - target_bearing;
+    dev_norm = our_heading - target_bearing;
     while(dev_norm < -180)
     {
         dev_norm += 360;
@@ -842,3 +797,4 @@ var rounding1000 = func(n){
     n = (n >= l) ? ((a + 1) * 1000) : (a * 1000);
     return(n);
 }
+

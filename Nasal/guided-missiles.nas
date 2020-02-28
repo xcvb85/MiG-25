@@ -4903,8 +4903,7 @@ var develev_to_devroll = func(dev_rad, elev_rad) {
 
 #was in radar
 var deviation_normdeg = func(our_heading, target_bearing) {
-	var dev_norm = geo.normdeg180(target_bearing-our_heading);
-	return dev_norm;
+	return geo.normdeg180(target_bearing-our_heading);
 }
 
 #
@@ -4913,6 +4912,7 @@ var deviation_normdeg = func(our_heading, target_bearing) {
 var spams = 0;
 var spamList = [];
 var mutexMsg = thread.newlock();
+var myCallsign = "";
 
 var defeatSpamFilter = func (str) {
   thread.lock(mutexMsg);
@@ -4924,7 +4924,7 @@ var defeatSpamFilter = func (str) {
   for (var i = 1; i <= spams; i+=1) {
     str = str~".";
   }
-  var myCallsign = getprop("sim/multiplay/callsign");
+  myCallsign = getprop("sim/multiplay/callsign");
   if (myCallsign != nil and find(myCallsign, str) != -1) {
   	str = myCallsign~": "~str;
   }
@@ -4936,14 +4936,14 @@ var defeatSpamFilter = func (str) {
   thread.unlock(mutexMsg);
 }
 
+var spam = 0;
 var spamLoop = func {
   thread.lock(mutexMsg);
-  var spam = pop(spamList);
+  spam = pop(spamList);
   thread.unlock(mutexMsg);
   if (spam != nil) {
     setprop("/sim/multiplay/chat", spam);
   }
-  settimer(spamLoop, 1.20);
 }
+maketimer(1.2, spamLoop);
 
-spamLoop();

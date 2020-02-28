@@ -154,9 +154,9 @@ var targetRCSSignal = func(targetCoord, targetModel, targetHeading, targetPitch,
 }
 
 var getRCS = func (echoCoord, echoHeading, echoPitch, echoRoll, myCoord, frontRCS) {
-    var sideRCSFactor  = 2.50;
-    var rearRCSFactor  = 1.75;
-    var bellyRCSFactor = 3.50;
+    #var sideRCSFactor  = 2.50;
+    #var rearRCSFactor  = 1.75;
+    #var bellyRCSFactor = 3.50;
     #first we calculate the 2D RCS:
     var vectorToEcho   = vector.Math.eulerToCartesian2(myCoord.course_to(echoCoord), vector.Math.getPitch(myCoord,echoCoord));
     var vectorEchoNose = vector.Math.eulerToCartesian3X(echoHeading, echoPitch, echoRoll);
@@ -170,9 +170,9 @@ var getRCS = func (echoCoord, echoHeading, echoPitch, echoRoll, myCoord, frontRC
     #print("horz aspect "~angleToNose);
     var horzRCS = 0;
     if (math.abs(angleToNose) <= 90) {
-      horzRCS = extrapolate(math.abs(angleToNose), 0, 90, frontRCS, sideRCSFactor*frontRCS);
+      horzRCS = extrapolate(math.abs(angleToNose), 0, 90, frontRCS, 2.50*frontRCS); #sideRCSFactor
     } else {
-      horzRCS = extrapolate(math.abs(angleToNose), 90, 180, sideRCSFactor*frontRCS, rearRCSFactor*frontRCS);
+      horzRCS = extrapolate(math.abs(angleToNose), 90, 180, 2.50*frontRCS, 1.75*frontRCS); #sideRCSFactor #rearRCSFactor
     }
     #print("RCS horz "~horzRCS);
     #next we calculate the 3D RCS:
@@ -180,9 +180,9 @@ var getRCS = func (echoCoord, echoHeading, echoPitch, echoRoll, myCoord, frontRC
     #print("angle to belly "~angleToBelly);
     var realRCS = 0;
     if (math.abs(angleToBelly) <= 90) {
-      realRCS = extrapolate(math.abs(angleToBelly),  0,  90, bellyRCSFactor*frontRCS, horzRCS);
+      realRCS = extrapolate(math.abs(angleToBelly),  0,  90, 3.50*frontRCS, horzRCS); #bellyRCSFactor
     } else {
-      realRCS = extrapolate(math.abs(angleToBelly), 90, 180, horzRCS, bellyRCSFactor*frontRCS);
+      realRCS = extrapolate(math.abs(angleToBelly), 90, 180, horzRCS, 3.50*frontRCS); #bellyRCSFactor
     }
     return realRCS;
 };
@@ -193,7 +193,5 @@ var extrapolate = func (x, x1, x2, y1, y2) {
 
 var getAspect = func (echoCoord, myCoord, echoHeading) {# ended up not using this
     # angle 0 deg = view of front
-    var course = echoCoord.course_to(myCoord);
-    var heading_offset = course - echoHeading;
-    return geo.normdeg180(heading_offset);
+    return geo.normdeg180(echoCoord.course_to(myCoord) - echoHeading);
 };
