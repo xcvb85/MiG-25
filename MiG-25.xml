@@ -142,7 +142,6 @@
     <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
-
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="M">
      <x>  7.0 </x>
@@ -154,7 +153,6 @@
     <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
-
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="M">
      <x>  7.0 </x>
@@ -166,7 +164,6 @@
     <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
-
   <contact type="STRUCTURE" name="TAIL">
     <location unit="M">
      <x>  9.7 </x>
@@ -178,12 +175,44 @@
     <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
-
-  <contact type="STRUCTURE" name="BELLY">
+  <contact type="STRUCTURE" name="LEFT_BELLY">
     <location unit="M">
      <x>  0.9 </x>
-     <y>  0.0 </y>
+     <y> -0.8 </y>
      <z> -0.4 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
+  </contact>
+  <contact type="STRUCTURE" name="RIGHT_BELLY">
+    <location unit="M">
+     <x>  0.9 </x>
+     <y>  0.8 </y>
+     <z> -0.4 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
+  </contact>
+  <contact type="STRUCTURE" name="LEFT_FIN">
+    <location unit="M">
+     <x>  9.4 </x>
+     <y> -1.6 </y>
+     <z>  0.9 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
+  </contact>
+  <contact type="STRUCTURE" name="RIGHT_FIN">
+    <location unit="M">
+     <x>  9.4 </x>
+     <y>  1.6 </y>
+     <z>  3.9 </z>
     </location>
     <static_friction>  1.00 </static_friction>
     <dynamic_friction> 1.00 </dynamic_friction>
