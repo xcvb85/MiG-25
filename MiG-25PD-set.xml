@@ -2,7 +2,7 @@
 <PropertyList>
   <sim include="Systems/views.xml">
     <description>Mikoyan-Gurevich MiG-25PD</description>
-    <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck</author>
+    <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck, Nikolai V. Chr.</author>
     <long-description>The MiG-25PD Foxbat is a record-breaking supersonic interceptor. It was introduced in the Soviet Union and some other allied countries in 1970.</long-description>
     <flight-model>jsb</flight-model>
     <aero>MiG-25</aero>
@@ -29,7 +29,34 @@
         <float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm" />
         <bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
       </generic>
-    </multiplay>
+    </multiplay>    
+    <previews>
+      <preview>
+	<type>exterior</type>
+	<path>Previews/MiG-25-1.jpg</path>
+	<splash type="bool">true</splash>
+      </preview>
+      <preview>
+	<type>exterior</type>
+	<path>Previews/MiG-25-2.jpg</path>
+	<splash type="bool">true</splash>
+      </preview>
+      <preview>
+	<type>exterior</type>
+	<path>Previews/MiG-25-3.jpg</path>
+	<splash type="bool">true</splash>
+      </preview>
+      <preview>
+	<type>exterior</type>
+	<path>Previews/MiG-25-4.jpg</path>
+	<splash type="bool">true</splash>
+      </preview>
+      <preview>
+	<type>exterior</type>
+	<path>Previews/MiG-25-5.jpg</path>
+	<splash type="bool">true</splash>
+      </preview>
+    </previews>
   </sim>
   <engines>
     <engine n="0">
@@ -96,6 +123,7 @@
 
     </keyboard>
   </input>
+    
   <payload>
     <armament>
       <r-60>
