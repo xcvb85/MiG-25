@@ -8,7 +8,7 @@
   <author>Daniel Overbeck</author>
   <filecreationdate>2020-01-05</filecreationdate>
   <version>V0.1</version>
-  <description>MiG-25RB</description>
+  <description>MiG-25</description>
   <reference refID="" author="н.н. котов" title="практическая аэродинамика самолета миг-25рб" date="1978"/>
  </fileheader>
 
@@ -51,7 +51,7 @@
  </mass_balance>
 
  <ground_reactions>
-  <contact type="BOGEY" name="NOSE">
+  <contact type="BOGEY" name="NOSE_GEAR">
    <location unit="M">
      <x> -1.27 </x>
      <y>  0.00 </y>
@@ -67,7 +67,7 @@
    <retractable>1</retractable>
   </contact>
 
-  <contact type="BOGEY" name="LEFT_MAIN">
+  <contact type="BOGEY" name="LEFT_GEAR">
    <location unit="M">
      <x>  3.6 </x>
      <y> -1.9 </y>
@@ -83,7 +83,7 @@
    <retractable>1</retractable>
   </contact>
 
-  <contact type="BOGEY" name="RIGHT_MAIN">
+  <contact type="BOGEY" name="RIGHT_GEAR">
    <location unit="M">
      <x>  3.6 </x>
      <y>  1.9 </y>
@@ -97,6 +97,18 @@
    <max_steer unit="DEG">0</max_steer>
    <brake_group>RIGHT</brake_group>
    <retractable>1</retractable>
+  </contact>
+
+  <contact type="STRUCTURE" name="NOSE">
+    <location unit="M">
+     <x> -9.3 </x>
+     <y>  0.0 </y>
+     <z>  0.0 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
 
   <contact type="STRUCTURE" name="LEFT_WING">
@@ -122,6 +134,18 @@
     <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
   </contact>
+
+  <contact type="STRUCTURE" name="TAIL">
+    <location unit="M">
+     <x>  9.7 </x>
+     <y>  0.0 </y>
+     <z> -0.4 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
+  </contact>
  </ground_reactions>
 
  <propulsion>
@@ -137,6 +161,11 @@
       <yaw>   0.0 </yaw>
     </orient>
     <feed>0</feed>
+    <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
+    <feed>4</feed>
+    <feed>5</feed>
     <thruster file="direct">
      <location unit="M">
        <x> 7.0 </x>
@@ -163,6 +192,11 @@
       <yaw>   0.0 </yaw>
     </orient>
     <feed>0</feed>
+    <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
+    <feed>4</feed>
+    <feed>5</feed>
     <thruster file="direct">
      <location unit="M">
        <x> 7.0 </x>
@@ -179,32 +213,62 @@
 
   <tank type="FUEL" number="0">
      <location unit="M">
-       <x>  2.0 </x>
+       <x>  2.5 </x>
        <y>  0.0 </y>
-       <z>  0.0 </z>
+       <z>  0.5 </z>
      </location>
-     <capacity unit="KG"> 8000 </capacity>
-     <contents unit="KG"> 5000 </contents>
+     <capacity unit="KG"> 3000 </capacity> <!-- 2300kg, rest in fin tanks -->
+     <contents unit="KG"> 3000 </contents>
   </tank>
 
   <tank type="FUEL" number="1">
+     <location unit="M">
+       <x>  2.5 </x>
+       <y> -0.7 </y>
+       <z>  1.1 </z>
+     </location>
+     <capacity unit="KG"> 4500 </capacity>
+     <contents unit="KG"> 3000 </contents>
+  </tank>
+
+  <tank type="FUEL" number="2">
+     <location unit="M">
+       <x>  2.5 </x>
+       <y>  0.7 </y>
+       <z>  1.1 </z>
+     </location>
+     <capacity unit="KG"> 4500 </capacity>
+     <contents unit="KG"> 3000 </contents>
+  </tank>
+
+  <tank type="FUEL" number="3">
      <location unit="M">
        <x>  5.0 </x>
        <y> -3.5 </y>
        <z>  0.7 </z>
      </location>
-     <capacity unit="KG"> 3000 </capacity>
-     <contents unit="KG"> 1000 </contents>
+     <capacity unit="KG"> 1000 </capacity>
+     <contents unit="KG">    0 </contents>
   </tank>
 
-  <tank type="FUEL" number="2">
+  <tank type="FUEL" number="4">
      <location unit="M">
        <x>  5.0 </x>
        <y>  3.5 </y>
        <z>  0.7 </z>
      </location>
-     <capacity unit="KG"> 3000 </capacity>
-     <contents unit="KG"> 1000 </contents>
+     <capacity unit="KG"> 1000 </capacity>
+     <contents unit="KG">    0 </contents>
+  </tank>
+
+  <tank type="FUEL" number="5">
+     <location unit="M">
+       <x>  6.5 </x>
+       <y>  0.0 </y>
+       <z>  0.9 </z>
+     </location>
+     <capacity unit="KG">  600 </capacity>
+     <contents unit="KG">    0 </contents>
   </tank>
  </propulsion>
 

@@ -52,6 +52,16 @@
          </systems>
       </jsbsim>
    </fdm>
+  <consumables>
+    <fuel>
+      <tank n="0"><name>Central main tank</name></tank>
+      <tank n="1"><name>Left main tank</name></tank>
+      <tank n="2"><name>Right main tank</name></tank>
+      <tank n="3"><name>Left wing tank</name></tank>
+      <tank n="4"><name>Right wing tank</name></tank>
+      <tank n="5"><name>Aft tank</name></tank>
+    </fuel>
+  </consumables>
    <payload>
       <weight n="0">
          <name>Center Station</name>
