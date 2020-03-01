@@ -447,7 +447,7 @@
     <type>rotate</type>
     <object-name>NoseGear</object-name>
     <property>gear/gear[0]/steering-norm</property>
-    <factor>-180</factor>
+    <factor>-360</factor>
     <axis>
       <x1-m>-1.481</x1-m>
       <y1-m> 0.000</y1-m>
