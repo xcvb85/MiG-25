@@ -298,6 +298,22 @@
       <one-xml-per-type type="bool">false</one-xml-per-type>
       <gravity-dropping type="bool">false</gravity-dropping>
     </armament>
+    
+    <weight n="0">
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+    </weight>
+    <weight n="1">
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+    </weight>
+    <weight n="2">
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+    </weight>
+    <weight n="3">
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+    </weight>
+    <weight n="4">
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+    </weight>
   </payload>
   <nasal>
     <vector>
