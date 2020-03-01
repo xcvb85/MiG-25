@@ -287,7 +287,8 @@
 
       <station-name>station</station-name>
       <models>Aircraft/MiG-25/Models/Stores/</models>
-      <modelsUseCase>false</modelsUseCase>
+      <modelsUseCase>true</modelsUseCase>
+      <modelsUpperCase type="bool">false</modelsUpperCase>
       <msg type="bool">true</msg>
       <enable-craters type="bool">true</enable-craters>
       <pylon-offset type="int">0</pylon-offset>

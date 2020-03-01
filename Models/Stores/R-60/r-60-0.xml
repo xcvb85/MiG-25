@@ -11,7 +11,7 @@
 	</animation>
 
 	<model>
-		<path>Aircraft/MiG-25/Models/Stores/R-60M/motor-smoke-0.xml</path>
+		<path>Aircraft/MiG-25/Models/Stores/R-60/motor-smoke-0.xml</path>
 		<offsets>
 			<x-m>1.44</x-m>
 			<y-m>0</y-m>
@@ -21,7 +21,7 @@
 
 	<model>
 		<name>explosion</name>
-		<path>Aircraft/MiG-25/Models/Stores/R-60M/explosion-0.xml</path>
+		<path>Aircraft/MiG-25/Models/Stores/R-60/explosion-0.xml</path>
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0</y-m>
