@@ -39,15 +39,47 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="SLUG*FT2">  70000 </ixx>
-   <iyy unit="SLUG*FT2"> 245000 </iyy>
-   <izz unit="SLUG*FT2"> 235000 </izz>
-   <emptywt unit="KG" >   20000 </emptywt>
    <location name="CG" unit="M">
      <x> 3.5 </x>
      <y> 0.0 </y>
      <z> 0.5 </z>
    </location>
+   <ixx unit="SLUG*FT2">  70000 </ixx>
+   <iyy unit="SLUG*FT2"> 245000 </iyy>
+   <izz unit="SLUG*FT2"> 235000 </izz>
+   <emptywt unit="KG" >   20000 </emptywt>
+   <pointmass name="Left Pylon0">
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="M">
+         <x>  4.4 </x>
+         <y> -4.5 </y>
+         <z> -0.1 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Left Pylon1">
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="M">
+         <x>  3.3 </x>
+         <y> -3.3 </y>
+         <z>  0.0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Right Pylon2">
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="M">
+         <x>  3.3 </x>
+         <y> -3.3 </y>
+         <z>  0.0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Right Pylon3">
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="M">
+         <x>  4.4 </x>
+         <y>  4.5 </y>
+         <z> -0.1 </z>
+      </location>
+   </pointmass>
  </mass_balance>
 
  <ground_reactions>
@@ -138,6 +170,18 @@
   <contact type="STRUCTURE" name="TAIL">
     <location unit="M">
      <x>  9.7 </x>
+     <y>  0.0 </y>
+     <z> -0.4 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">      80967.60 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 80967.60 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="BELLY">
+    <location unit="M">
+     <x>  0.9 </x>
      <y>  0.0 </y>
      <z> -0.4 </z>
     </location>
