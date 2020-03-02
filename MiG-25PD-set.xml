@@ -57,7 +57,13 @@
 	<splash type="bool">true</splash>
       </preview>
     </previews>
+    
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/MiG-25/Models/submodels.xml</path>
+    </submodels>
   </sim>
+  
   <engines>
     <engine n="0">
       <running>true</running>
@@ -127,12 +133,29 @@
 	<repeatable>false</repeatable>
 	<binding>
 	  <command>nasal</command>
-	  <script>pylons.fcs.jettisonFuel();</script>
+	  <script>MiG25.tankjettison();</script>
 	</binding>
       </key>
+
+      <key n="113">
+	<name>q</name>
+	<desc>countermeasure release</desc>
+	<repeatable>false</repeatable>
+	<binding>
+	  <command>property-assign</command>
+	  <property>ai/submodels/submodel[0]/flare-release-cmd</property>
+	  <value>1</value>
+	</binding>
+	<mod-up>
+	  <command>property-assign</command>
+	  <property>ai/submodels/submodel[0]/flare-release-cmd</property>
+	  <value>0</value>
+	</mod-up>
+      </key>
+      
     </keyboard>
   </input>
-    
+  
   <payload>
     <armament>
       <r-60>
@@ -322,6 +345,8 @@
         <DLZ type="bool">false</DLZ> <!-- Supports dynamic launch zone info. For now only works with A/A. [optional] -->
       </r-40td>
 
+      <tank-trigger type="bool">flase</tank-trigger>
+      
       <station-name>station</station-name>
       <models>Aircraft/MiG-25/Models/Stores/</models>
       <modelsUseCase>true</modelsUseCase>
@@ -353,6 +378,9 @@
     </weight>
   </payload>
   <nasal>
+    <MiG25>
+      <file>Aircraft/MiG-25/Nasal/MiG-25.nas</file>
+    </MiG25>
     <vector>
       <file>Aircraft/MiG-25/Nasal/vector.nas</file>
     </vector>
