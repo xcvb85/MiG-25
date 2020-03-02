@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+  <sim include="MiG-25-common.xml">
+    <description>Mikoyan-Gurevich MiG-25PU</description>
+    <variant-of>MiG-25P</variant-of>
+    <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck</author>
+    <long-description>The MiG-25PU Foxbat-C is the trainer version with dual cockpit. The first flight of this variant was in 1968.</long-description>
+  </sim>
+</PropertyList>
+
