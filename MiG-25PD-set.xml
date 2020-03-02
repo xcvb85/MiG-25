@@ -121,6 +121,15 @@
 	</binding>
       </key>
 
+      <key n="26">
+	<name>Ctrl+z</name>
+	<desc>center tank jettison</desc>
+	<repeatable>false</repeatable>
+	<binding>
+	  <command>nasal</command>
+	  <script>pylons.fcs.jettisonFuel();</script>
+	</binding>
+      </key>
     </keyboard>
   </input>
     
