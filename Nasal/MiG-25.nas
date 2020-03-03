@@ -1,8 +1,8 @@
 var reloadCM = func {
-    setprop("ai/submodels/submodel[0]/count", 30);
-    setprop("ai/submodels/submodel[1]/count", 30);
-    setprop("ai/submodels/submodel[2]/count", 30);
-    setprop("ai/submodels/submodel[3]/count", 30);
+    setprop("ai/submodels/submodel[0]/count", 15);
+    setprop("ai/submodels/submodel[1]/count", 15);
+    setprop("ai/submodels/submodel[2]/count", 15);
+    setprop("ai/submodels/submodel[3]/count", 15);
 }
 
 var tankjettison = func {

@@ -62,6 +62,22 @@
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/MiG-25/Models/submodels.xml</path>
     </submodels>
+
+    <menubar>
+      <default>
+	<menu n="10">
+	  <label>MiG-25</label>
+	  <enabled type="bool">true</enabled>
+	  <item>
+	    <label>Reload chaff/flare</label>
+	    <binding>
+	      <command>nasal</command>
+	      <script>MiG25.reloadCM();</script>
+	    </binding>
+	  </item>
+	</menu>
+      </default>
+    </menubar>
   </sim>
   
   <engines>

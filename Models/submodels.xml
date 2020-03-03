@@ -13,7 +13,7 @@
     <speed>400.0</speed>        <!-- ft/sec -->
     <repeat>true</repeat>
     <delay>0.25</delay>
-    <count>30</count>
+    <count>15</count>
     <offsets>
       <x-m> 3.754</x-m>
       <y-m>-3.322</y-m>
@@ -42,7 +42,7 @@
     <speed>400.0</speed>        <!-- ft/sec -->
     <repeat>true</repeat>
     <delay>0.25</delay>
-    <count>30</count>
+    <count>15</count>
     <offsets>
       <x-m>3.754</x-m>
       <y-m>3.322</y-m>
@@ -73,7 +73,7 @@
     <speed>50</speed>        <!-- ft/sec -->
     <repeat>true</repeat>
     <delay>0.25</delay>
-    <count>30</count>
+    <count>15</count>
     <offsets>
       <x-m> 3.754</x-m>
       <y-m>-3.322</y-m>
@@ -102,7 +102,7 @@
     <speed>50</speed>        <!-- ft/sec -->
     <repeat>true</repeat>
     <delay>0.25</delay>
-    <count>30</count>
+    <count>15</count>
     <offsets>
       <x-m>3.754</x-m>
       <y-m>3.322</y-m>
