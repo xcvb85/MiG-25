@@ -347,7 +347,6 @@
 
  <flight_control file="Systems/jsb-controls"/>
  <aerodynamics file="MiG-25-aerodynamics.xml"/>
- <system file="jsb-brake"/>
  <system file="jsb-electric"/>
 
 <!--

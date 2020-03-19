@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-  <sim include="Systems/views.xml">
-    <flight-model>jsb</flight-model>
-    <aero>MiG-25</aero>
-    <flaps>
-      <setting>0.0</setting>
-      <setting>1.0</setting>
-    </flaps>
-    <model>
-      <path>Aircraft/MiG-25/Models/MiG-25.xml</path>
-    </model>
+<sim>
     <sound>
       <path>Aircraft/MiG-25/Sounds/Sound.xml</path>
     </sound>
@@ -54,7 +45,7 @@
 	<splash type="bool">true</splash>
       </preview>
     </previews>
-  </sim>
+</sim>
   <engines>
     <engine n="0">
       <running>true</running>

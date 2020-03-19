@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PropertyList>
-  <sim include="MiG-25-common.xml">
+<PropertyList include="MiG-25-Common.xml">
+  <sim>
     <description>Mikoyan-Gurevich MiG-25PU</description>
     <variant-of>MiG-25P</variant-of>
     <author>Petar Jedvaj, Domokos Jüttner, Daniel Overbeck</author>
     <long-description>The MiG-25PU Foxbat-C is the trainer version with dual cockpit. The first flight of this variant was in 1968.</long-description>
+    <flight-model>jsb</flight-model>
+    <aero>MiG-25</aero>
+    <model>
+      <path>Aircraft/MiG-25/Models/pu.ac</path>
+    </model>
+    <model>
+      <path>Aircraft/MiG-25/Models/MiG-25.xml</path>
+    </model>
+        <view n="0">
+            <internal userarchive="n">true</internal>
+            <config>
+                <pitch-offset-deg type="double" userarchive="n">-10.0</pitch-offset-deg>
+                <x-offset-m type="double" userarchive="n">0.0</x-offset-m>
+                <y-offset-m type="double" userarchive="n">1.3</y-offset-m>
+                <!-- remember to change eyepoint in JSB when changing this -->
+                <z-offset-m type="double" userarchive="n">-3.0</z-offset-m>
+                <default-field-of-view-deg type="double" userarchive="n">90</default-field-of-view-deg><!-- when changing this, change it in ja37.nas also -->
+            </config>
+        </view>
   </sim>
 </PropertyList>
 
