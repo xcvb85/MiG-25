@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
     <path>Aircraft/MiG-25/Models/Cockpit.ac</path>
+      <offsets>
+        <x-m>-2.816</x-m>
+        <y-m> 0.000</y-m>
+        <z-m>-0.626</z-m>
+      </offsets>
+
 	<model>
 		<name>Gunsight</name>
 		<path>Aircraft/MiG-25/Models/Instruments/Gunsight/Gunsight.xml</path>

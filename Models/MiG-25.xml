@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <path>MiG-25.ac</path>
-  <offsets>
-    <heading-deg>0</heading-deg>
-    <roll-deg>0</roll-deg>
-    <x-m>0</x-m>
-    <y-m>0</y-m>
-    <z-m>0</z-m>
-  </offsets>
 
   <model>
     <path>Aircraft/MiG-25/Models/Cockpit.xml</path>
@@ -52,6 +45,7 @@
     <object-name>FinR</object-name>
     <object-name>FlapL</object-name>
     <object-name>FlapR</object-name>
+    <object-name>Front</object-name>
     <object-name>FrontCanopy</object-name>
     <object-name>FrontCanopy.001</object-name>
     <object-name>Fuselage</object-name>

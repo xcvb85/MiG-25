@@ -6,7 +6,7 @@ OBJECT world
 name "Blender_exporter_v3.0__base.ac"
 kids 58
 OBJECT poly
-name "0Fuselage"
+name "Fuselage"
 data 13
 Fuselage.mesh
 crease 180.0
